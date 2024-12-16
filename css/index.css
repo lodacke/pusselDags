@@ -1,0 +1,17 @@
+:root {
+    --item-size: 10vh;
+}
+
+nav{
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+nav > *{
+    height: var(--item-size);
+    width: var(--item-size);
+    border: 1px solid black;
+}
