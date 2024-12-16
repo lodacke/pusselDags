@@ -1,5 +1,34 @@
+main {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .start-button {
     height: 115px;
     width: 385px;
     font-size: 60px;
+}
+
+.landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-;
+    height: 20vw;
+    width: 100vh;
+    background-color: red;
+    margin-bottom: 15%;
+}
+
+.airplane {
+    height: 20vw;
+    width: 35vh;
+    background-color: blue;
+}
+
+.banner {
+    height: 20vw;
+    width: 70vh;
+    
 }

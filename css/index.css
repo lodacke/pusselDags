@@ -1,13 +1,17 @@
 :root {
-    --item-size: 10vh;
+    --item-size: 8vw;
+}
+
+body {
+    margin: 3%;
 }
 
 nav{
     height: 20vh;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 nav > *{
@@ -15,3 +19,4 @@ nav > *{
     width: var(--item-size);
     border: 1px solid black;
 }
+
