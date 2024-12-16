@@ -1,4 +1,5 @@
 import { nav } from "/utilities/variables.js"
+import { renderLandingPage } from "/js/landingPage.js"
 
 function renderNav(){
     nav.innerHTML = `
@@ -10,3 +11,4 @@ function renderNav(){
 }
 
 renderNav();
+renderLandingPage();
