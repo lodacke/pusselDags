@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.character {
+    height: 25vw;
+    width: 25vh;
+    background-color: blue;
+}
