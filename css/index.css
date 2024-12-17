@@ -7,7 +7,8 @@
 
 body {
     margin: 3%;
-    transition: background-color 2s ease, background 2s ease;
+    transition: background-color 2s ease, background 1s ease;
+    position: relative;
 }
 
 nav{
@@ -46,21 +47,30 @@ body[data-theme="darkmode"] {
     background-color: var(--night-color);
 }
 
-body[data-theme="sunset"]{
-    background: linear-gradient(to top, transparent 0%, var(--day-color) 0%, var(--sunset-color) 0%);
-    background-size: 100% 100%;
-    background-position: center;
+body[data-theme="sunset"] {
+    background-color: var(--day-color); 
+}
 
+body[data-theme="sunset"]::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 0;
+    background: linear-gradient(to top, var(--sunset-color) 0%, transparent 100%);
+    z-index: -1;
+    animation: grow-from-bottom 4s ease-in-out forwards;
 }
 
 @keyframes grow-from-bottom {
     0% {
-        background: linear-gradient(to top, transparent 0%, transparent 0%, transparent 0%);
-    }
-    50% {
-        background: linear-gradient(to top, transparent 0%, var(--day-color) 50%, var(--sunset-color) 100%);
+        height: 0;
     }
     100% {
-        background: linear-gradient(to top, transparent 0%, var(--day-color) 100%, var(--sunset-color) 100%);
+        height: 50vh;
     }
 }
+
+
