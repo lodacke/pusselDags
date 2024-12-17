@@ -1,9 +1,13 @@
 :root {
     --item-size: 8vw;
+    --night-color: #0D618B;
+    --sunset-color: #FFAEE5;
+    --day-color: #52BDF3;
 }
 
 body {
     margin: 3%;
+    transition: background-color 2s ease, background 2s ease;
 }
 
 nav{
@@ -18,5 +22,45 @@ nav > *{
     height: var(--item-size);
     width: var(--item-size);
     border: 1px solid black;
+    border-radius: 20px;
+    background-position: center;
 }
 
+.nav-darkmode{
+    background-image: url("/media/darkmode.svg");
+}
+
+.nav-sunset{
+    background-image: url("/media/sunset.svg");
+}
+
+.nav-sound{
+    background-image: url("/media/sound.svg");
+}
+
+body[data-theme="day"] {
+    background-color: var(--day-color);
+}
+
+body[data-theme="darkmode"] {
+    background-color: var(--night-color);
+}
+
+body[data-theme="sunset"]{
+    background: linear-gradient(to top, transparent 0%, var(--day-color) 0%, var(--sunset-color) 0%);
+    background-size: 100% 100%;
+    background-position: center;
+
+}
+
+@keyframes grow-from-bottom {
+    0% {
+        background: linear-gradient(to top, transparent 0%, transparent 0%, transparent 0%);
+    }
+    50% {
+        background: linear-gradient(to top, transparent 0%, var(--day-color) 50%, var(--sunset-color) 100%);
+    }
+    100% {
+        background: linear-gradient(to top, transparent 0%, var(--day-color) 100%, var(--sunset-color) 100%);
+    }
+}
