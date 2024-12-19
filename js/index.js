@@ -1,25 +1,69 @@
-import { nav, body } from "/utilities/variables.js"
+import { nav, body, forfront } from "/utilities/variables.js"
 import { renderLandingPage } from "/js/landingPage.js"
+import { forfrontItems } from "../API/forfront-items.js";
 
 function renderNav(){
     nav.innerHTML = `
-    <div class="nav-darkmode"></div>
-    <div class="nav-sunset"></div>
+    <div class="nav-change-mode day"></div>
     <div class="nav-sound"></div>
     `;
 
-    let darkmodeDom = document.querySelector(".nav-darkmode");
-    let sunsetDom = document.querySelector(".nav-sunset");
+    let changeModeDom = document.querySelector(".nav-change-mode");
 
-    darkmodeDom.addEventListener("click", () => {
-        body.setAttribute("data-theme", "darkmode")
-    })
+    changeModeDom.addEventListener("click", () => {
+        const currentTheme = body.getAttribute("data-theme");
 
-    sunsetDom.addEventListener("click", () => {
-        body.setAttribute("data-theme", "sunset")
+        switch (currentTheme) {
+            case "day":
+                body.setAttribute("data-theme", "sunset");
+                changeModeDom.classList.remove("day")
+                changeModeDom.classList.add("sunset")
+                renderForfront("sunset", true)
+                break;
+            case "sunset":
+                body.setAttribute("data-theme", "darkmode");
+                changeModeDom.classList.remove("sunset")
+                changeModeDom.classList.add("darkmode")
+                renderForfront("darkmode", true)
+                break;
+            case "darkmode":
+                body.setAttribute("data-theme", "day");
+                changeModeDom.classList.remove("darkmode")
+                changeModeDom.classList.add("day")
+                renderForfront("day", true)
+                break;
+        }
+    });
+
+renderForfront("day");
+}
+
+function renderForfront(mode, change){
+
+    if(!change){
+        forfront.innerHTML = `
+        <div class="items-container"></div>
+        <div class="landscape"></div>
+        `;
+    } 
+
+    let itemContainer = forfront.querySelector(".items-container");
+
+    forfrontItems.forEach(modeItem => {
+        if(modeItem.name === mode){
+            console.log("mode")
+            itemContainer.innerHTML = `
+            <div class="main-item"></div>
+            `;
+
+            for(let i = 0; i < 7; i++){
+                let smallItem = document.createElement("div");
+                smallItem.classList.add(`small-item${i}`)
+                itemContainer.append(smallItem)
+            }
+        }
     })
 
 }
-
 renderNav();
 renderLandingPage();

@@ -3,15 +3,19 @@
     --night-color: #0D618B;
     --sunset-color: #FFAEE5;
     --day-color: #52BDF3;
+    --margins-viewport: 3%;
 }
 
 body {
-    margin: 3%;
+    margin: 0;
     transition: background-color 2s ease, background 1s ease;
     position: relative;
 }
 
+/* NAV */ 
+
 nav{
+    margin: var(--margins-viewport);
     height: 20vh;
     display: flex;
     justify-content: flex-start;
@@ -27,12 +31,18 @@ nav > *{
     background-position: center;
 }
 
-.nav-darkmode{
+/* DATA-THEME */ 
+
+.darkmode{
     background-image: url("/media/darkmode.svg");
 }
 
-.nav-sunset{
+.sunset{
     background-image: url("/media/sunset.svg");
+}
+
+.day{
+    background-image: url("/media/day.svg");
 }
 
 .nav-sound{
@@ -60,8 +70,8 @@ body[data-theme="sunset"]::after {
     width: 100vw;
     height: 0;
     background: linear-gradient(to top, var(--sunset-color) 0%, transparent 100%);
-    z-index: -1;
-    animation: grow-from-bottom 4s ease-in-out forwards;
+    z-index: -2;
+    animation: grow-from-bottom 2s ease-in-out forwards;
 }
 
 @keyframes grow-from-bottom {
@@ -69,8 +79,41 @@ body[data-theme="sunset"]::after {
         height: 0;
     }
     100% {
-        height: 100vh;
+        height: 120vh;
     }
 }
 
+/* forfront*/ 
 
+.forfront {
+    position: absolute; 
+    bottom: -12.5%; 
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    z-index: -1; 
+    pointer-events: none;
+}
+
+.landscape {
+    height: 100%; 
+    background-image: url("/media/forfront.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.sun-moon{
+     position: absolute; 
+     top: -200px;
+     left: 400px;
+    height: 55vw;
+    width: 50vh;
+    background-image: url("/media/Sol.svg");
+    background-size: cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1; 
+}

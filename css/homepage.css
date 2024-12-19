@@ -1,5 +1,5 @@
 main {
-    height: 60vh;
+    height: 60vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,22 +13,33 @@ main {
 
 .landing-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-;
-    height: 20vw;
-    width: 100vh;
-    background-color: red;
+    height: 40vw;
     margin-bottom: 15%;
 }
 
 .airplane {
-    height: 20vw;
+    margin-left: -20px;
+    height: 100%;
     width: 35vh;
-    background-color: blue;
+    background-image: url(/media/airplane.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .banner {
-    height: 20vw;
-    width: 70vh;
-    
+    height: 100%;
+    width: 90vh;
+    background-image: url(/media/banner\ +\ line.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+} 
+
+.banner > h1{
+    margin-left: 40px;
+    font-size: 36px;
 }
