@@ -87,39 +87,26 @@ body[data-theme="sunset"]::after {
 
 .forfront {
     position: absolute; 
-    bottom: -12.5%; 
     left: 0;
     width: 100vw;
-    height: 50vh;
+    max-height: 100vh;
     z-index: -1; 
     pointer-events: none;
 }
 
 .landscape {
-    height: 100%; 
+    position: fixed;
+    top: 50%;
+    height: 50vh;
+    width: 100%;
     background-image: url("/media/forfront.svg");
     background-size: cover;
     background-position: center;
-    z-index: -1;
     pointer-events: none;
 }
 
-.sun-moon{
-     position: absolute; 
-     top: -200px;
-     left: 400px;
-    height: 55vw;
-    width: 50vh;
-    background-image: url("/media/Sol.svg");
-    background-size: cover;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: -1; 
-}
-
-.small1, .small2, .small3, .small4, .small5, .small6, .small7, main-item{
-    position: absolute;
+.small1, .small2, .small3, .small4, .small5, .small6, .small7, .main-item{
+    position: fixed;
     z-index: -2;
 }
 
