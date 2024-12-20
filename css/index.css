@@ -117,3 +117,49 @@ body[data-theme="sunset"]::after {
     background-repeat: no-repeat;
     z-index: -1; 
 }
+
+.small1, .small2, .small3, .small4, .small5, .small6, .small7, main-item{
+    position: absolute;
+    z-index: -2;
+}
+
+.small1{
+    top: -600px;
+    left: 40px;
+}
+
+.small2{
+    top: -510px;
+    left: 520px;
+}
+
+.small3{
+    top: -680px;
+    left: 920px;
+}
+
+.small4{
+    top: -310px;
+    left: 980px;
+}
+
+.small5{
+    top: -110px;
+    left: 380px;
+}
+
+.small6{
+    top: -410px;
+    left: 730px;
+}
+
+.small7{
+    top: -210px;
+    left: 30px;
+}
+
+.main-item{
+    top: 200px;
+    right: 50px;
+}
+

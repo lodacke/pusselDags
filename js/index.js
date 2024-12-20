@@ -49,21 +49,22 @@ function renderForfront(mode, change){
 
     let itemContainer = forfront.querySelector(".items-container");
 
-    forfrontItems.forEach(modeItem => {
+    forfrontItems.forEach( modeItem=> {
         if(modeItem.name === mode){
-            console.log("mode")
             itemContainer.innerHTML = `
-            <div class="main-item"></div>
+            <img src=${modeItem.mainComponent} class="main-item"></img>
             `;
 
-            for(let i = 0; i < 7; i++){
-                let smallItem = document.createElement("div");
-                smallItem.classList.add(`small-item${i}`)
-                itemContainer.append(smallItem)
+            for (let key in modeItem) {
+                if (key.startsWith("small")) { 
+                    let smallItem = document.createElement("img");
+                    smallItem.src = modeItem[key]; 
+                    smallItem.classList.add(`${key}`); 
+                    itemContainer.append(smallItem);
+                }
             }
-        }
+        };
     })
-
 }
 renderNav();
 renderLandingPage();
