@@ -23,6 +23,11 @@ main{
     top: 70%;
 }
 
+.puzzle-container-after{
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 
 .puzzle-piece{
     z-index: 3;
@@ -33,3 +38,23 @@ main{
     position: relative;
 }
 
+.puzzle-finish{
+   animation: grow-shrink 2s ease-in;
+}
+
+@keyframes grow-shrink {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+button{
+    padding: 20px;
+    font-size: 30px;
+}

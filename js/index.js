@@ -45,16 +45,7 @@ function renderNav(){
     });
 
 navBackDom.addEventListener("click", () => {
-
-    functionStack.pop();
-    const previousFunctionData = functionStack[functionStack.length - 1];
-
-    if (previousFunctionData) {
-        const { func, args } = previousFunctionData;
-        func(...args); 
-    } else {
-        console.warn("No previous function found in the stack");
-    }
+    returnStep()
 });
 
 renderForfront("day");
@@ -87,6 +78,18 @@ function renderForfront(mode, change){
             }
         };
     })
+}
+
+export function returnStep(){
+    functionStack.pop();
+    const previousFunctionData = functionStack[functionStack.length - 1];
+
+    if (previousFunctionData) {
+        const { func, args } = previousFunctionData;
+        func(...args); 
+    } else {
+        console.warn("No previous function found in the stack");
+    }
 }
 
 renderNav();

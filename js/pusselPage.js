@@ -3,6 +3,7 @@ import { main } from "/utilities/variables.js";
 
 export function renderPussel(character) {
     swapCSS("puzzle");
+    let counter = 0;
 
     main.innerHTML = `
     <div class="puzzle-container">
@@ -38,6 +39,7 @@ export function renderPussel(character) {
         let pieceId = event.dataTransfer.getData("text/plain");
         let piece = document.getElementById(pieceId);
         outline.append(piece)
+        counter++;
         
         piece.style.position = "absolute";
         switch (piece.id) {
@@ -59,5 +61,31 @@ export function renderPussel(character) {
             break;
         }
 
+        if(counter === 4){
+            console.log("puzzle completed!")
+            renderFinished(character)
+        }
     });
+}
+
+function renderFinished(character){
+    setTimeout(() => {
+        let container = main.querySelector("#outline");
+        while (container.firstChild) {
+            container.removeChild(container.firstChild); 
+        }
+        container.innerHTML = `<img class="puzzle-finish" src="${character.imgTotal}">`;
+
+        let retryButton = document.createElement("button");
+        retryButton.innerText = "Spela igen";
+        let puzzleContainer = document.querySelector(".puzzle-container")
+        puzzleContainer.classList.add("puzzle-container-after");
+        puzzleContainer.append(retryButton)
+
+        retryButton.addEventListener("click", () => {
+            renderPussel(character)
+        })
+    }, 600)
+
+
 }

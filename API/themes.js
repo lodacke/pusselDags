@@ -21,7 +21,7 @@ export const themes = [
                 pussel3: "./media/babblarna/Bobbo-puzzle/bobbo-3.svg", 
                 pussel4: "./media/babblarna/Bobbo-puzzle/bobbo-4.svg", 
                 pusselOutline: "./media/babblarna/Bobbo-puzzle/Bobbo-outline.svg",
-                 maxHeight: 162
+                 maxHeight: 163.2
             },
             {
                 name: "Babba",
@@ -57,7 +57,7 @@ export const themes = [
         ]
     },
     {
-        name: "bamse",
+        name: "Bamse",
         img: "./media/group-characters/babblarna-group.svg",
         characters: [
             {
