@@ -31,6 +31,10 @@ nav > *{
     background-position: center;
 }
 
+.nav-back{
+    opacity: 0;
+}
+
 /* DATA-THEME */ 
 
 .darkmode{

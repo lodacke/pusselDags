@@ -2,13 +2,22 @@ import { nav, body, forfront } from "/utilities/variables.js"
 import { renderLandingPage } from "/js/landingPage.js"
 import { forfrontItems } from "../API/forfront-items.js";
 
+let functionStack = [];
+
+export function callFunction(func) {
+    functionStack.push(func); 
+    func(); 
+}
+
 function renderNav(){
     nav.innerHTML = `
     <div class="nav-change-mode day"></div>
     <div class="nav-sound"></div>
+    <div class="nav-back"> <p>Back</p> </div>
     `;
 
     let changeModeDom = document.querySelector(".nav-change-mode");
+    let navBackDom = document.querySelector(".nav-back");
 
     changeModeDom.addEventListener("click", () => {
         const currentTheme = body.getAttribute("data-theme");
@@ -32,6 +41,16 @@ function renderNav(){
                 changeModeDom.classList.add("day")
                 renderForfront("day", true)
                 break;
+        }
+    });
+
+    navBackDom.addEventListener("click", () => {
+        functionStack.pop(); 
+        const previousFunction = functionStack[functionStack.length - 1];
+        if (previousFunction) {
+            previousFunction();
+        } else {
+            console.warn("function not found")
         }
     });
 
@@ -67,4 +86,4 @@ function renderForfront(mode, change){
     })
 }
 renderNav();
-renderLandingPage();
+callFunction(renderLandingPage)
