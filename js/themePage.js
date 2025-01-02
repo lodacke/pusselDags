@@ -19,7 +19,7 @@ export function renderTheme () {
         <h2> ${theme.name}</h2>
         <img src="${theme.img}">`;
         div.addEventListener("click" , () => {
-            callFunction(renderCharacters(theme));
+            callFunction(() => renderCharacters(theme))
         })
         themeContainer.append(div);
     }); 

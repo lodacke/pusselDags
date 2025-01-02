@@ -4,9 +4,9 @@ import { forfrontItems } from "../API/forfront-items.js";
 
 let functionStack = [];
 
-export function callFunction(func) {
-    functionStack.push(func); 
-    func(); 
+export function callFunction(func, ...args) {
+    functionStack.push({ func, args });
+    func(...args) 
 }
 
 function renderNav(){
@@ -44,15 +44,18 @@ function renderNav(){
         }
     });
 
-    navBackDom.addEventListener("click", () => {
-        functionStack.pop(); 
-        const previousFunction = functionStack[functionStack.length - 1];
-        if (previousFunction) {
-            previousFunction();
-        } else {
-            console.warn("function not found")
-        }
-    });
+navBackDom.addEventListener("click", () => {
+
+    functionStack.pop();
+    const previousFunctionData = functionStack[functionStack.length - 1];
+
+    if (previousFunctionData) {
+        const { func, args } = previousFunctionData;
+        func(...args); 
+    } else {
+        console.warn("No previous function found in the stack");
+    }
+});
 
 renderForfront("day");
 }
@@ -85,5 +88,6 @@ function renderForfront(mode, change){
         };
     })
 }
+
 renderNav();
 callFunction(renderLandingPage)
