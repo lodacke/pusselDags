@@ -21,6 +21,7 @@ export function renderPussel(character) {
 
     const puzzlePieces = document.querySelectorAll(".puzzle-piece");
     const outline = document.getElementById("outline");
+    outline.style.maxHeight = character.maxHeight  + "px";
 
     puzzlePieces.forEach(piece => {
         piece.addEventListener("dragstart", (event) => {

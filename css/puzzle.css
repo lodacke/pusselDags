@@ -3,12 +3,18 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.2);
     width: 80%;
     margin-left: 5%;
     padding: 5%;
     margin-bottom: 5%;
 }
+
+.r-puzzle-container, .l-puzzle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 .puzzle-container{
     display: flex;
@@ -25,12 +31,5 @@ main{
 
 #outline{
     position: relative;
-    max-height: 249px;
-}
-
-.r-puzzle-container, .l-puzzle-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
