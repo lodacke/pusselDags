@@ -4,9 +4,11 @@ import { renderTheme } from "./themePage.js";
 import { callFunction } from "./index.js";
 
 export function renderLandingPage () {
+
+    document.querySelector(".nav-back").style.opacity = 0;
+
     swapCSS("homepage");
     
-
     main.innerHTML = `
         <div class="landing-container"> 
             <div class="banner">

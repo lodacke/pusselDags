@@ -14,5 +14,11 @@ main {
 .character {
     height: 25vw;
     width: 25vh;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }

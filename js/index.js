@@ -17,7 +17,7 @@ function renderNav(){
     `;
 
     let changeModeDom = document.querySelector(".nav-change-mode");
-    let navBackDom = document.querySelector(".nav-back");
+    let navBackDom = document.querySelector(".nav-back")
 
     changeModeDom.addEventListener("click", () => {
         const currentTheme = body.getAttribute("data-theme");

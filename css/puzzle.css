@@ -1,0 +1,36 @@
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+    width: 80%;
+    margin-left: 5%;
+    padding: 5%;
+    margin-bottom: 5%;
+}
+
+.puzzle-container{
+    display: flex;
+    height: 40vw;
+    position: absolute;
+    top: 70%;
+}
+
+
+.puzzle-piece{
+    z-index: 3;
+    cursor: pointer;
+}
+
+#outline{
+    position: relative;
+    max-height: 249px;
+}
+
+.r-puzzle-container, .l-puzzle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

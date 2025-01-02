@@ -21,7 +21,7 @@ export function renderCharacters (theme) {
             renderPussel(character);
         })
         div.innerHTML = `<H2> ${character.name}</H2>
-        <div> ${character.imgTotal}</div>`;
+         <img src="${character.imgTotal}" alt="${character.name}" />`;
         charactersContainer.append(div);
 
     });

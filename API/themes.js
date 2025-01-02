@@ -1,39 +1,59 @@
 export const themes = [
     {
         name: "babblarna",
-        img: "",
+        img: "./media/group-characters/babblarna-group.svg",
         characters: [
             {
-                name: "Diddi",
-                imgTotal: "diddiImage",
-                pusselParts: "pussel", 
+                name: "Bibbi",
+                imgTotal: "./media/babblarna/Bibbi.svg",
+                pussel1: "./media/babblarna/Bibbi-puzzle/bibbi-1.svg", 
+                pussel2: "./media/babblarna/Bibbi-puzzle/bibbi-2.svg", 
+                pussel3: "./media/babblarna/Bibbi-puzzle/bibbi-3.svg", 
+                pussel4: "./media/babblarna/Bibbi-puzzle/bibbi-4.svg", 
+                pusselOutline: "./media/babblarna/Bibbi-puzzle/Bibbi-outline.svg" 
             },
             {
                 name: "Bobbo",
-                imgTotal: "bobboImage",
-                pusselParts: "pussel", 
+                imgTotal: "../media/babblarna/Bobbo.svg",
+                pussel1: "./media/babblarna/Bobbo-puzzle/bobbo-1.svg", 
+                pussel2: "./media/babblarna/Bobbo-puzzle/bobbo-2.svg", 
+                pussel3: "./media/babblarna/Bobbo-puzzle/bobbo-3.svg", 
+                pussel4: "./media/babblarna/Bobbo-puzzle/bobbo-4.svg", 
+                pusselOutline: "./media/babblarna/Bobbo-puzzle/Bobbo-outline.svg" 
             },
             {
                 name: "Babba",
-                imgTotal: "babbaImage",
-                pusselParts: "pussel", 
+                imgTotal: "../media/babblarna/Babba.svg",
+                pussel1: "./media/babblarna/Babba-puzzle/babba-1.svg", 
+                pussel2: "./media/babblarna/Babba-puzzle/babba-2.svg", 
+                pussel3: "./media/babblarna/Babba-puzzle/babba-3.svg", 
+                pussel4: "./media/babblarna/Babba-puzzle/babba-4.svg", 
+                pusselOutline: "./media/babblarna/Babba-puzzle/Babba-outline.svg" 
             },
             {
                 name: "Dadda",
-                imgTotal: "daddaImage",
-                pusselParts: "pussel", 
+                imgTotal: "/media/babblarna/Dadda.svg",
+                pussel1: "./media/babblarna/Dadda-puzzle/dadda-1.svg", 
+                pussel2: "./media/babblarna/Dadda-puzzle/dadda-2.svg", 
+                pussel3: "./media/babblarna/Dadda-puzzle/dadda-3.svg", 
+                pussel4: "./media/babblarna/Dadda-puzzle/dadda-4.svg", 
+                pusselOutline: "./media/babblarna/Dadda-puzzle/Dadda-outline.svg" 
             },
             {
                 name: "Doddo",
-                imgTotal: "doddoImage",
-                pusselParts: "pussel", 
+                imgTotal: "../media/babblarna/Doddo.svg",
+                pussel1: "./media/babblarna/Doddo-puzzle/Doddo-4.svg", 
+                pussel2: "./media/babblarna/Doddo-puzzle/Doddo-3.svg", 
+                pussel3: "./media/babblarna/Doddo-puzzle/Doddo-2.svg", 
+                pussel4: "./media/babblarna/Doddo-puzzle/Doddo-1.svg", 
+                pusselOutline: "./media/babblarna/Doddo-puzzle/Doddo-outline.svg"  
             }
 
         ]
     },
     {
         name: "bamse",
-        img: "",
+        img: "./media/group-characters/babblarna-group.svg",
         characters: [
             {
                 name: "Bamse",
@@ -59,7 +79,7 @@ export const themes = [
     },
     {
         name: "bing",
-        img: "",
+        img: "./media/group-characters/babblarna-group.svg",
         characters: [
             {
                 name: "Bing",
