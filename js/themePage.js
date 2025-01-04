@@ -6,14 +6,14 @@ import { callFunction } from "./index.js";
 
 export function renderTheme () {
     swapCSS("themePage");
-    document.querySelector(".nav-back").style.opacity = 1;
+    document.querySelector(".nav-back").style.display = "block";
 
     main.innerHTML = `
     <div class="container">  
     </div>`;
     
     let themeContainer = document.querySelector(".container");
-    themes.forEach(theme => {
+    themes.forEach((theme, index)  => {
         let div = document.createElement("div");
         div.innerHTML = ` 
         <h2> ${theme.name}</h2>
@@ -21,7 +21,17 @@ export function renderTheme () {
         div.addEventListener("click" , () => {
             callFunction(() => renderCharacters(theme))
         })
-        themeContainer.append(div);
+        div.classList.add("theme-container");
+        themeContainer.append(div); 
     }); 
+
+    let themesDoms = themeContainer.querySelectorAll(".theme-container");
+
+  themesDoms.forEach((theme, index) => {
+        setTimeout(() => {
+            theme.classList.add("move-in")
+        }, index * 1000)
+    }); // class is still never added. why?
+    
 }
 

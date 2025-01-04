@@ -18,4 +18,28 @@ main {
     border-radius: 20px;
     box-sizing:content-box;
 }
+.theme-container {
+    opacity: 0;
+}
+
+.move-in {
+    opacity: 1;
+    transform: scale(1); 
+    animation: landing 1s ease-out forwards;
+}
+
+@keyframes landing {
+    0% {
+        opacity: 0;
+        transform: scale(0.9); 
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);  
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
 

@@ -15,8 +15,8 @@ main {
     display: flex;
     height: 40vw;
     margin-bottom: 15%;
+    animation: fly-in 3s ease-in-out forwards;
 }
-
 .airplane {
     margin-left: -20px;
     height: 100%;
@@ -42,4 +42,31 @@ main {
 .banner > h1{
     margin-left: 40px;
     font-size: 36px;
+}
+
+.landing-ending{
+    animation: fly-out 2.5s ease-in-out forwards;
+}
+
+@keyframes fly-in {
+    0% {
+        transform: translateX(-100%); 
+    }
+    100% {
+        transform: translateX(0%); 
+    }
+    
+}
+
+@keyframes fly-out { 
+    0% {
+        transform: translateX(0); 
+    }
+    70%{
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(110%); 
+        opacity: 0;
+    }
 }

@@ -8,7 +8,7 @@ export const forfrontItems = [
         small4: "./media/forgroundMode/Moln-big.svg",
         small5: "./media/forgroundMode/Moln-medium.svg",
         small6: "./media/forgroundMode/Moln-small.svg",
-        small7: "./media/forgroundMode/Moln-small.svg"
+        small7: "./media/forgroundMode/Moln-big.svg"
     },
         {
         name: "sunset",
@@ -25,10 +25,10 @@ export const forfrontItems = [
         name: "darkmode",
         mainComponent: "./media/forgroundMode/Måne.svg",
         small1: "./media/forgroundMode/Star-closedeyes-small.svg",
-        small2: "./media/forgroundMode/Star-openeyes-big.svg",
+        small2: "./media/forgroundMode/Star-openeyes-small-turned.svg",
         small3: "./media/forgroundMode/Star-closedeyes-small-turned.svg",
         small4: "./media/forgroundMode/Star-closedeyes-small.svg",
-        small5: "./media/forgroundMode/Star-closedeyes-small.svg",
+        small5: "./media/forgroundMode/Star-openeyes-big.svg",
         small6: "./media/forgroundMode/Star-closedeyes-small-turned.svg",
         small7: "./media/forgroundMode/Star-closedeyes-small.svg",
     },

@@ -5,11 +5,11 @@ import { callFunction } from "./index.js";
 
 export function renderLandingPage () {
 
-    document.querySelector(".nav-back").style.opacity = 0;
+    document.querySelector(".nav-back").style.display = "none";
 
     swapCSS("homepage");
     
-    main.innerHTML = `
+    main.innerHTML = `  
         <div class="landing-container"> 
             <div class="banner">
                 <H1> Välkommen till Pusseldags!</H1>
@@ -20,7 +20,10 @@ export function renderLandingPage () {
 
     let startButton = document.querySelector(".start-button");
     startButton.addEventListener("click", () => {
-        callFunction(renderTheme);
-    })
+        document.querySelector(".landing-container").classList.add("landing-ending")
+         setTimeout(() => {
+            callFunction(renderTheme); 
+        }, 3000); 
+    });
 }
 
