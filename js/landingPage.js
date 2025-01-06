@@ -21,7 +21,7 @@ export function renderLandingPage () {
         main.querySelector(".start-button").classList.add("button-ending")
          setTimeout(() => {
             callFunction(renderTheme); 
-        }, 3000); 
+        }, 2000); 
     });
 }
 

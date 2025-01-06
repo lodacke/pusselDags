@@ -11,7 +11,7 @@ export const themes = [
                 pussel2: "./media/babblarna/Bibbi-puzzle/bibbi-2.svg", 
                 pussel3: "./media/babblarna/Bibbi-puzzle/bibbi-3.svg", 
                 pussel4: "./media/babblarna/Bibbi-puzzle/bibbi-4.svg", 
-                pusselOutline: "./media/babblarna/Bibbi-puzzle/Bibbi-outline.svg",
+                outline: "./media/babblarna/Bibbi-puzzle/Bibbi-outline.svg",
                  maxHeight: 242
             },
             {
@@ -22,29 +22,31 @@ export const themes = [
                 pussel2: "./media/babblarna/Bobbo-puzzle/bobbo-2.svg", 
                 pussel3: "./media/babblarna/Bobbo-puzzle/bobbo-3.svg", 
                 pussel4: "./media/babblarna/Bobbo-puzzle/bobbo-4.svg", 
-                pusselOutline: "./media/babblarna/Bobbo-puzzle/Bobbo-outline.svg",
+                outline: "./media/babblarna/Bobbo-puzzle/Bobbo-outline.svg",
                  maxHeight: 163.2
             },
             {
                 name: "Babba",
                 theme: "Babblarna",
                 imgTotal: "../media/babblarna/Babba.svg",
+                imgPuzzle: "/media/babblarna/Babba-puzzle/Babba-puzzle.svg",
                 pussel1: "./media/babblarna/Babba-puzzle/babba-1.svg", 
                 pussel2: "./media/babblarna/Babba-puzzle/babba-2.svg", 
                 pussel3: "./media/babblarna/Babba-puzzle/babba-3.svg", 
                 pussel4: "./media/babblarna/Babba-puzzle/babba-4.svg", 
-                pusselOutline: "./media/babblarna/Babba-puzzle/Babba-outline.svg" ,
+                outline: "./media/babblarna/Babba-puzzle/Babba-outline.svg" ,
                 maxHeight: 220
             },
             {
                 name: "Dadda",
                 theme: "Babblarna",
                 imgTotal: "/media/babblarna/Dadda.svg",
+                imgPuzzle: "/media/babblarna/Dadda-puzzle/Dadda-puzzle.svg",
                 pussel1: "./media/babblarna/Dadda-puzzle/dadda-1.svg", 
                 pussel2: "./media/babblarna/Dadda-puzzle/dadda-2.svg", 
                 pussel3: "./media/babblarna/Dadda-puzzle/dadda-3.svg", 
                 pussel4: "./media/babblarna/Dadda-puzzle/dadda-4.svg", 
-                pusselOutline: "./media/babblarna/Dadda-puzzle/Dadda-outline.svg",
+                outline: "./media/babblarna/Dadda-puzzle/Dadda-outline.svg",
                 maxHeight: 200
             },
             {
@@ -55,7 +57,7 @@ export const themes = [
                 pussel2: "./media/babblarna/Doddo-puzzle/Doddo-3.svg", 
                 pussel3: "./media/babblarna/Doddo-puzzle/Doddo-2.svg", 
                 pussel4: "./media/babblarna/Doddo-puzzle/Doddo-1.svg", 
-                pusselOutline: "./media/babblarna/Doddo-puzzle/Doddo-outline.svg",
+                outline: "./media/babblarna/Doddo-puzzle/Doddo-outline.svg",
                 maxHeight: 200
             }
 
@@ -68,7 +70,8 @@ export const themes = [
             {
                 name: "Bamse",
                 theme: "Bamse",
-                imgTotal:  "./media/bamse/bamse-puzzle/bamse.svg",
+                imgPuzzle: "./media/bamse/bamse-puzzle/bamse-full.svg",
+                imgTotal: "./media/bamse/bamse-puzzle/bamse.svg",
                 pussel1: "./media/bamse/bamse-puzzle/Bamse-1.svg", 
                 pussel2: "./media/bamse/bamse-puzzle/Bamse-2.svg", 
                 pussel3: "./media/bamse/bamse-puzzle/Bamse-3.svg", 
@@ -78,7 +81,7 @@ export const themes = [
                 pussel7: "./media/bamse/bamse-puzzle/Bamse-7.svg", 
                 pussel8: "./media/bamse/bamse-puzzle/Bamse-8.svg", 
                 pussel9: "./media/bamse/bamse-puzzle/Bamse-9.svg", 
-                pusselOutline: "./media/bamse/bamse-puzzle/Bamse-outline.svg", 
+                outline: "./media/bamse/bamse-puzzle/Bamse-outline.svg", 
                 maxHeight: 501
             },
             {
