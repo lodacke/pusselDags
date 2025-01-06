@@ -11,7 +11,7 @@ export function callFunction(func, ...args) {
 
 function renderNav(){
     nav.innerHTML = `
-    <div class="nav-back"> <p>Back</p> </div>
+    <div class="nav-back"></div>
     <div class="nav-change-mode day"></div>
     <div class="nav-sound"></div>
     `;

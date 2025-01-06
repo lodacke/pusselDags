@@ -21,6 +21,12 @@ export function renderCharacters (theme) {
         div.innerHTML = `<H2> ${character.name}</H2>
          <img src="${character.imgTotal}" alt="${character.name}" />`;
         charactersContainer.append(div);
-
     });
+
+    let characterDoms = main.querySelectorAll(".character")
+    characterDoms.forEach((char, index) => {
+        setTimeout(() => {
+            char.classList.add("move-in")
+        }, index * 400)
+    }); 
 }

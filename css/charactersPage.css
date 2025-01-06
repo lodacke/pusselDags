@@ -14,11 +14,35 @@ main {
 .character {
     height: 25vw;
     width: 25vh;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--container-color);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    position: relative; 
+    border: 3px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+
+.character:hover{
+    border: 3px solid black; 
+    animation: landing 1s ease-in forwards;
+}
+
+.move-in{
+    animation: landing 1s ease-in forwards;
+}
+
+@keyframes landing {
+    0% {
+        transform: translateY(0px);  
+    }
+    50% {
+        transform: translateY(-10px);  
+    }
+    100% {
+        transform: translateY(0px);  
+    }
 }

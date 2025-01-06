@@ -1,6 +1,6 @@
 export const themes = [
     {
-        name: "babblarna",
+        name: "Babblarna",
         img: "./media/group-characters/babblarna-group.svg",
         characters: [
             {
@@ -83,7 +83,7 @@ export const themes = [
         ]
     },
     {
-        name: "bing",
+        name: "Bing",
         img: "./media/group-characters/babblarna-group.svg",
         characters: [
             {

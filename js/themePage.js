@@ -13,11 +13,11 @@ export function renderTheme () {
     </div>`;
     
     let themeContainer = document.querySelector(".container");
-    themes.forEach((theme, index)  => {
+    themes.forEach(theme => {
         let div = document.createElement("div");
         div.innerHTML = ` 
-        <h2> ${theme.name}</h2>
-        <img src="${theme.img}">`;
+        <img src="${theme.img}">
+         <h2> ${theme.name}</h2>`;
         div.addEventListener("click" , () => {
             callFunction(() => renderCharacters(theme))
         })
@@ -30,8 +30,8 @@ export function renderTheme () {
   themesDoms.forEach((theme, index) => {
         setTimeout(() => {
             theme.classList.add("move-in")
-        }, index * 1000)
-    }); // class is still never added. why?
+        }, index * 900)
+    }); 
     
 }
 
