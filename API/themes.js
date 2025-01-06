@@ -7,23 +7,23 @@ export const themes = [
                 name: "Bibbi",
                 theme: "Babblarna",
                 imgTotal: "./media/babblarna/Bibbi.svg",
+                imgPuzzle: "/media/babblarna/Bibbi-puzzle/Bibbi-full.svg",
                 pussel1: "./media/babblarna/Bibbi-puzzle/bibbi-1.svg", 
                 pussel2: "./media/babblarna/Bibbi-puzzle/bibbi-2.svg", 
                 pussel3: "./media/babblarna/Bibbi-puzzle/bibbi-3.svg", 
                 pussel4: "./media/babblarna/Bibbi-puzzle/bibbi-4.svg", 
                 outline: "./media/babblarna/Bibbi-puzzle/Bibbi-outline.svg",
-                 maxHeight: 242
             },
             {
                 name: "Bobbo",
                 theme: "Babblarna",
                 imgTotal: "../media/babblarna/Bobbo.svg",
+                imgPuzzle: "/media/babblarna/Bobbo-puzzle/Bobbo-full.svg",
                 pussel1: "./media/babblarna/Bobbo-puzzle/bobbo-1.svg", 
                 pussel2: "./media/babblarna/Bobbo-puzzle/bobbo-2.svg", 
                 pussel3: "./media/babblarna/Bobbo-puzzle/bobbo-3.svg", 
                 pussel4: "./media/babblarna/Bobbo-puzzle/bobbo-4.svg", 
                 outline: "./media/babblarna/Bobbo-puzzle/Bobbo-outline.svg",
-                 maxHeight: 163.2
             },
             {
                 name: "Babba",
@@ -35,30 +35,28 @@ export const themes = [
                 pussel3: "./media/babblarna/Babba-puzzle/babba-3.svg", 
                 pussel4: "./media/babblarna/Babba-puzzle/babba-4.svg", 
                 outline: "./media/babblarna/Babba-puzzle/Babba-outline.svg" ,
-                maxHeight: 220
             },
             {
                 name: "Dadda",
                 theme: "Babblarna",
                 imgTotal: "/media/babblarna/Dadda.svg",
-                imgPuzzle: "/media/babblarna/Dadda-puzzle/Dadda-puzzle.svg",
+                imgPuzzle: "/media/babblarna/Dadda-puzzle/Dadda-full.svg",
                 pussel1: "./media/babblarna/Dadda-puzzle/dadda-1.svg", 
                 pussel2: "./media/babblarna/Dadda-puzzle/dadda-2.svg", 
                 pussel3: "./media/babblarna/Dadda-puzzle/dadda-3.svg", 
                 pussel4: "./media/babblarna/Dadda-puzzle/dadda-4.svg", 
                 outline: "./media/babblarna/Dadda-puzzle/Dadda-outline.svg",
-                maxHeight: 200
             },
             {
                 name: "Doddo",
                 theme: "Babblarna",
                 imgTotal: "../media/babblarna/Doddo.svg",
-                pussel1: "./media/babblarna/Doddo-puzzle/Doddo-4.svg", 
-                pussel2: "./media/babblarna/Doddo-puzzle/Doddo-3.svg", 
-                pussel3: "./media/babblarna/Doddo-puzzle/Doddo-2.svg", 
-                pussel4: "./media/babblarna/Doddo-puzzle/Doddo-1.svg", 
+                imgPuzzle: "/media/babblarna/Doddo-puzzle/Doddo-full.svg",
+                pussel1: "./media/babblarna/Doddo-puzzle/Doddo-1.svg", 
+                pussel2: "./media/babblarna/Doddo-puzzle/Doddo-2.svg", 
+                pussel3: "./media/babblarna/Doddo-puzzle/Doddo-3.svg", 
+                pussel4: "./media/babblarna/Doddo-puzzle/Doddo-4.svg", 
                 outline: "./media/babblarna/Doddo-puzzle/Doddo-outline.svg",
-                maxHeight: 200
             }
 
         ]
@@ -82,14 +80,12 @@ export const themes = [
                 pussel8: "./media/bamse/bamse-puzzle/Bamse-8.svg", 
                 pussel9: "./media/bamse/bamse-puzzle/Bamse-9.svg", 
                 outline: "./media/bamse/bamse-puzzle/Bamse-outline.svg", 
-                maxHeight: 501
             },
             {
                 name: "Lille-Skutt",
                 theme: "Bamse",
                 imgTotal: "./media/bamse/lille-skutt-puzzle/lille-skutt.svg",
                 pusselParts: "pussel",
-                maxHeight: 200 
             },
             {
                 name: "Skalman",

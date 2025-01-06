@@ -36,7 +36,7 @@ export function renderPussel(character) {
 
     const puzzlePieces = document.querySelectorAll(".puzzle-piece");
     const outline = document.getElementById("outline");
-    outline.style.maxHeight = character.maxHeight  + "px";
+    outline.style.maxHeight = "501px"
 
     puzzlePieces.forEach(piece => {
         piece.addEventListener("dragstart", (event) => {
@@ -57,7 +57,9 @@ export function renderPussel(character) {
         counter++;
 
         piece.style.position = "absolute";
+        console.log(character.theme) // this reads as babblarna on console log, but it renders case Bamse. why?
         switch (character.theme){
+            
             case "Babblarna":
                 switch (piece.id) {
                     case "piece1":
@@ -70,11 +72,11 @@ export function renderPussel(character) {
                         break;
                     case "piece3":
                         piece.style.left = "0%"; 
-                        piece.style.top = "89%";   
+                        piece.style.top = "50.5%";   
                         break;
                     case "piece4":
                         piece.style.left = "50%";  
-                        piece.style.top = "89%";   
+                        piece.style.top = "50.5%";   
                         break;
                 }
 
@@ -82,6 +84,7 @@ export function renderPussel(character) {
                 console.log("puzzle completed!")
                 renderFinished(character)
             }
+        break;
         case "Bamse":
             console.log("Bamse is theme")
             switch(piece.id){
