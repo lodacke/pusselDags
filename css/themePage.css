@@ -1,5 +1,5 @@
 main {
-    height: 40vw;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,8 @@ main {
 
 .theme-container{
     background-color: var(--container-color);
-    width: 30%;
+    height: 22%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -29,7 +30,7 @@ main {
 
 .theme-container > h2{
     text-align: center;
-    font-size: 3.1vw;
+    font-size: 25px;
     margin-bottom: 0px; 
 }
 

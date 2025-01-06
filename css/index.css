@@ -3,7 +3,7 @@
     --night-color: #0D618B;
     --sunset-color: #FFAEE5;
     --day-color: #52BDF3;
-    --margins-viewport: 3%;
+    --margins-viewport: 2%;
     --container-color: #FDFFEF;
     --biggest-font: 25px;
     --middle-font: 18px;
@@ -109,7 +109,7 @@ body[data-theme="sunset"]::after {
     position: absolute; 
     left: 0;
     width: 100vw;
-    max-height: 100vh;
+    max-height: 190vh;
     z-index: -1; 
     pointer-events: none;
 }
@@ -128,10 +128,6 @@ body[data-theme="sunset"]::after {
 .small1, .small2, .small3, .small4, .small5, .small6, .small7, .main-item{
     position: fixed;
     z-index: -2;
-}
-
-.main-item{
-    animation:cubic-bezier(0.6, 0.04, 0.98, 0.335)
 }
 
 .small1{
