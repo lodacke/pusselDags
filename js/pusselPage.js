@@ -7,18 +7,18 @@ export function renderPussel(character) {
 
     main.innerHTML = `
     <div class="puzzle-container">
-        <div class="l-puzzle-container">
-            <img class="puzzle-piece" draggable="true" id="piece1" src="${character.pussel1}" />
-            <img class="puzzle-piece" draggable="true" id="piece2" src="${character.pussel3}" />
-        </div>
-        <div id="outline">
+            <div id="outline">
             <img class="puzzle-outline" src="${character.pusselOutline}" />
         </div>
-        <div class="r-puzzle-container">
+        <div class="puzzle-container-pieces">
             <img class="puzzle-piece" draggable="true" id="piece3" src="${character.pussel2}" />
+            <img class="puzzle-piece" draggable="true" id="piece1" src="${character.pussel1}" />
+            <img class="puzzle-piece" draggable="true" id="piece2" src="${character.pussel3}" />
             <img class="puzzle-piece" draggable="true" id="piece4" src="${character.pussel4}" />
         </div>
     </div>`;
+
+    document.querySelector(".landscape").style.opacity = "0";
 
     const puzzlePieces = document.querySelectorAll(".puzzle-piece");
     const outline = document.getElementById("outline");
@@ -49,7 +49,7 @@ export function renderPussel(character) {
             break;
         case "piece2":
             piece.style.left = "0%";  
-            piece.style.top = "50%";  
+            piece.style.top = "88%";  
             break;
         case "piece3":
             piece.style.left = "50%"; 
@@ -57,7 +57,7 @@ export function renderPussel(character) {
             break;
         case "piece4":
             piece.style.left = "50%";  
-            piece.style.top = "50%";   
+            piece.style.top = "88%";   
             break;
         }
 

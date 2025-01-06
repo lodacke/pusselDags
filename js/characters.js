@@ -4,12 +4,16 @@ import {renderPussel} from "./pusselPage.js"
 import { callFunction } from "./index.js";
 
 export function renderCharacters (theme) {
+
+    console.log(theme)
     swapCSS("charactersPage");
+
+        document.querySelector(".landscape").style.opacity = "1";
 
     main.innerHTML = `
     <div class="container">
     </div>`;
-  
+    
     let charactersContainer = document.querySelector(".container");
     theme.characters.forEach(character => {
         let div = document.createElement("div");
@@ -18,7 +22,7 @@ export function renderCharacters (theme) {
         div.addEventListener("click", ()=> {
             callFunction(() => renderPussel(character))
         })
-        div.innerHTML = `<H2> ${character.name}</H2>
+        div.innerHTML = `
          <img src="${character.imgTotal}" alt="${character.name}" />`;
         charactersContainer.append(div);
     });

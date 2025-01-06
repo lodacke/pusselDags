@@ -30,7 +30,7 @@ export function renderTheme () {
   themesDoms.forEach((theme, index) => {
         setTimeout(() => {
             theme.classList.add("move-in")
-        }, index * 900)
+        },  index * 900)
     }); 
     
 }

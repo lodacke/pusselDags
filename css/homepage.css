@@ -1,14 +1,23 @@
 main {
-    height: 60vw;
+    height: 60vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
 .start-button {
-    height: 115px;
-    width: 385px;
-    font-size: 60px;
+    height: 25%;
+    width: 23vw;
+    font-size: 44px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.button-ending{
+    animation: fade-out 3s ease-in-out forwards;
 }
 
 .landing-container {
@@ -16,6 +25,13 @@ main {
     height: 40vw;
     margin-bottom: 15%;
     animation: fly-in 3s ease-in-out forwards;
+}
+
+.landing-container > img{
+    height: 70%;
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 .airplane {
     margin-left: -20px;
@@ -69,4 +85,20 @@ main {
         transform: translateX(110%); 
         opacity: 0;
     }
+}
+
+@keyframes fade-out {
+        0% {
+        opacity: 0.9; 
+    }
+    70%{
+        opacity: 0.5;
+    }
+    90%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+    
 }

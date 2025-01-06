@@ -5,6 +5,7 @@ export const themes = [
         characters: [
             {
                 name: "Bibbi",
+                theme: "Babblarna",
                 imgTotal: "./media/babblarna/Bibbi.svg",
                 pussel1: "./media/babblarna/Bibbi-puzzle/bibbi-1.svg", 
                 pussel2: "./media/babblarna/Bibbi-puzzle/bibbi-2.svg", 
@@ -15,6 +16,7 @@ export const themes = [
             },
             {
                 name: "Bobbo",
+                theme: "Babblarna",
                 imgTotal: "../media/babblarna/Bobbo.svg",
                 pussel1: "./media/babblarna/Bobbo-puzzle/bobbo-1.svg", 
                 pussel2: "./media/babblarna/Bobbo-puzzle/bobbo-2.svg", 
@@ -25,6 +27,7 @@ export const themes = [
             },
             {
                 name: "Babba",
+                theme: "Babblarna",
                 imgTotal: "../media/babblarna/Babba.svg",
                 pussel1: "./media/babblarna/Babba-puzzle/babba-1.svg", 
                 pussel2: "./media/babblarna/Babba-puzzle/babba-2.svg", 
@@ -35,6 +38,7 @@ export const themes = [
             },
             {
                 name: "Dadda",
+                theme: "Babblarna",
                 imgTotal: "/media/babblarna/Dadda.svg",
                 pussel1: "./media/babblarna/Dadda-puzzle/dadda-1.svg", 
                 pussel2: "./media/babblarna/Dadda-puzzle/dadda-2.svg", 
@@ -45,46 +49,64 @@ export const themes = [
             },
             {
                 name: "Doddo",
+                theme: "Babblarna",
                 imgTotal: "../media/babblarna/Doddo.svg",
                 pussel1: "./media/babblarna/Doddo-puzzle/Doddo-4.svg", 
                 pussel2: "./media/babblarna/Doddo-puzzle/Doddo-3.svg", 
                 pussel3: "./media/babblarna/Doddo-puzzle/Doddo-2.svg", 
                 pussel4: "./media/babblarna/Doddo-puzzle/Doddo-1.svg", 
                 pusselOutline: "./media/babblarna/Doddo-puzzle/Doddo-outline.svg",
-                 maxHeight: 200
+                maxHeight: 200
             }
 
         ]
     },
     {
         name: "Bamse",
-        img: "./media/group-characters/babblarna-group.svg",
+        img: "./media/group-characters/bamse-characters.svg",
         characters: [
             {
                 name: "Bamse",
-                imgTotal: "bamseImage",
-                pusselParts: "pussel", 
+                theme: "Bamse",
+                imgTotal:  "./media/bamse/bamse-puzzle/bamse.svg",
+                pussel1: "./media/bamse/bamse-puzzle/Bamse-1.svg", 
+                pussel2: "./media/bamse/bamse-puzzle/Bamse-2.svg", 
+                pussel3: "./media/bamse/bamse-puzzle/Bamse-3.svg", 
+                pussel4: "./media/bamse/bamse-puzzle/Bamse-4.svg", 
+                pussel5: "./media/bamse/bamse-puzzle/Bamse-5.svg", 
+                pussel6: "./media/bamse/bamse-puzzle/Bamse-6.svg", 
+                pussel7: "./media/bamse/bamse-puzzle/Bamse-7.svg", 
+                pussel8: "./media/bamse/bamse-puzzle/Bamse-8.svg", 
+                pussel9: "./media/bamse/bamse-puzzle/Bamse-9.svg", 
+                pusselOutline: "./media/bamse/bamse-puzzle/Bamse-outline.svg", 
+                maxHeight: 501
             },
             {
-                name: "Lille Skutt",
-                imgTotal: "lilleSkuttImage",
-                pusselParts: "pussel", 
+                name: "Lille-Skutt",
+                theme: "Bamse",
+                imgTotal: "./media/bamse/lille-skutt-puzzle/lille-skutt.svg",
+                pusselParts: "pussel",
+                maxHeight: 200 
             },
             {
                 name: "Skalman",
-                imgTotal: "skalmanImage",
+                theme: "Bamse",
+                imgTotal: "./media/bamse/skalman-puzzle/skalman.svg",
                 pusselParts: "pussel", 
+                maxHeight: 200
             },
             {
                 name: "Farmor",
-                imgTotal: "farmorImage",
-                pusselParts: "pussel", 
+                theme: "Bamse",
+                imgTotal: "./media/bamse/farmor-puzzle/farmor.svg",
+                pusselParts: "pussel",
+                maxHeight: 200 
             }
         ]
     },
     {
         name: "Bing",
-        img: "./media/group-characters/babblarna-group.svg",
+        img: "./media/group-characters/bing-characters.png",
         characters: [
             {
                 name: "Bing",

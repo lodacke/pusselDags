@@ -10,17 +10,15 @@ export function renderLandingPage () {
     swapCSS("homepage");
     
     main.innerHTML = `  
-        <div class="landing-container"> 
-            <div class="banner">
-                <H1> Välkommen till Pusseldags!</H1>
-            </div>
-            <div class="airplane"></div>
+        <div class="landing-container">
+        <img src="./media/airplaine-banner-cord.svg" alt="Välkommen till puzzeldags!"> 
         </div>
         <button class="start-button">Start</button>`;
 
     let startButton = document.querySelector(".start-button");
     startButton.addEventListener("click", () => {
-        document.querySelector(".landing-container").classList.add("landing-ending")
+        main.querySelector(".landing-container").classList.add("landing-ending")
+        main.querySelector(".start-button").classList.add("button-ending")
          setTimeout(() => {
             callFunction(renderTheme); 
         }, 3000); 

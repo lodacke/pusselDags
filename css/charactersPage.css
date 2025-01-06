@@ -2,33 +2,39 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vw;
+    height: 60vh;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    gap: 2%;
+    gap: 3%;
 }
 
 .character {
-    height: 25vw;
-    width: 25vh;
+    height: 29vh;
+    width: 29vh;
+    padding: 10px;
     background-color: var(--container-color);
     border-radius: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     position: relative; 
-    border: 3px solid transparent;
-    transition: border 0.3s ease-in-out;
+    border: 3px solid black;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.character > img{
+    height: 90%;
+    width: 90%;
 }
 
 .character:hover{
     border: 3px solid black; 
-    animation: landing 1s ease-in forwards;
+    box-shadow: inset 0 0 4px 5px #b1b797;
+    animation: jump 1s ease; 
 }
 
 .move-in{
@@ -45,4 +51,11 @@ main {
     100% {
         transform: translateY(0px);  
     }
+}
+
+@keyframes jump {
+        50% {
+        transform: translateY(-10px);  
+    }
+    
 }
