@@ -44,11 +44,11 @@ function renderNav(){
         }
     });
 
-navBackDom.addEventListener("click", () => {
-    returnStep()
-});
+    navBackDom.addEventListener("click", () => {
+        returnStep()
+    });
 
-renderForfront("day");
+    renderForfront("day");
 }
 
 function renderForfront(mode, change){
@@ -65,7 +65,7 @@ function renderForfront(mode, change){
     forfrontItems.forEach( modeItem=> {
         if(modeItem.name === mode){
             itemContainer.innerHTML = `
-            <img src=${modeItem.mainComponent} class="main-item"></img>
+            <img src=${modeItem.mainComponent} class="main-item ${mode}-item"></img>
             `;
 
             for (let key in modeItem) {

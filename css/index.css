@@ -131,8 +131,16 @@ body[data-theme="sunset"]::after {
     z-index: -2;
 }
 
-.main-item{
-    animation:cubic-bezier(0.6, 0.04, 0.98, 0.335)
+.main-item.sunset-item{
+    animation: sunset-move 2s ease-in-out forwards;
+}
+
+.main-item.darkmode-item{
+    animation: item-opacity 2s ease-in-out;
+}
+
+.main-item.day-item{
+    animation: sun-enter 2s ease-in-out;
 }
 
 .small1{
@@ -142,12 +150,12 @@ body[data-theme="sunset"]::after {
 
 .small2{
     bottom: 60%;
-    left: 3%
+    left: 3%;   
 }
 
 .small3{
     top: 2%;
-  left: 44%;
+    left: 44%;
 }
 
 .small4{
@@ -168,24 +176,68 @@ body[data-theme="sunset"]::after {
 .small7{
     right: 0%;
     top: 5%;
-    z-index: -3;
 }
 
 .small8{
     left: 10%;
     bottom: 35%;
-    z-index: -3;
 }
 
 .small9{
     right: 15%;
-    bottom: 5%;
-    z-index: -3;  
+    bottom: 5%; 
 }
-
 
 .main-item{
     left: 66%;
     bottom: 53%;
 }
 
+.darkmode-item > .small4 .small3 .small2, .sunset-item > .small4, .small3, .small2{
+    animation: item-wiggle 2s ease-in;
+}
+
+@keyframes sun-enter {
+    0% {
+        transform: translate(25%, -50%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }  
+}
+
+@keyframes sunset-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-90%, 110%);
+    }
+}
+
+@keyframes item-opacity {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes item-wiggle {
+    0% {
+    transform: rotate(0deg); 
+    }
+    25% {
+      transform: rotate(-10deg); 
+    }
+    50% {
+      transform: rotate(10deg); 
+    }
+    75% {
+      transform: rotate(-10deg); 
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}

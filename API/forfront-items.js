@@ -9,7 +9,7 @@ export const forfrontItems = [
         small5: "./media/forgroundMode/Moln-medium.svg",
         small6: "./media/forgroundMode/Moln-small.svg",
         small7: "./media/forgroundMode/Moln-big.svg",
-        small8: "./media/forgroundMode/Moln-small.svg",
+        small8: "./media/forgroundMode/Moln-medium.svg",
         small9: "./media/forgroundMode/Moln-big.svg"
         
     },
