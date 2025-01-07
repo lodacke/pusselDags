@@ -24,19 +24,19 @@ function renderNav(){
 
         switch (currentTheme) {
             case "day":
-                body.setAttribute("data-theme", "sunset");
+                body.dataset.theme = "sunset";
                 changeModeDom.classList.remove("day")
                 changeModeDom.classList.add("sunset")
                 renderForfront("sunset", true)
                 break;
             case "sunset":
-                body.setAttribute("data-theme", "darkmode");
+                body.dataset.theme = "darkmode";
                 changeModeDom.classList.remove("sunset")
                 changeModeDom.classList.add("darkmode")
                 renderForfront("darkmode", true)
                 break;
             case "darkmode":
-                body.setAttribute("data-theme", "day");
+                body.dataset.theme = "day";
                 changeModeDom.classList.remove("darkmode")
                 changeModeDom.classList.add("day")
                 renderForfront("day", true)

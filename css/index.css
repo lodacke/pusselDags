@@ -126,7 +126,7 @@ body[data-theme="sunset"]::after {
     pointer-events: none;
 }
 
-.small1, .small2, .small3, .small4, .small5, .small6, .small7, .main-item{
+.small1, .small2, .small3, .small4, .small5, .small6, .small7, .small8, .small9, .main-item{
     position: fixed;
     z-index: -2;
 }
@@ -170,6 +170,19 @@ body[data-theme="sunset"]::after {
     top: 5%;
     z-index: -3;
 }
+
+.small8{
+    left: 10%;
+    bottom: 35%;
+    z-index: -3;
+}
+
+.small9{
+    right: 15%;
+    bottom: 5%;
+    z-index: -3;  
+}
+
 
 .main-item{
     left: 66%;

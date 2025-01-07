@@ -8,7 +8,10 @@ export const forfrontItems = [
         small4: "./media/forgroundMode/Moln-big.svg",
         small5: "./media/forgroundMode/Moln-medium.svg",
         small6: "./media/forgroundMode/Moln-small.svg",
-        small7: "./media/forgroundMode/Moln-big.svg"
+        small7: "./media/forgroundMode/Moln-big.svg",
+        small8: "./media/forgroundMode/Moln-small.svg",
+        small9: "./media/forgroundMode/Moln-big.svg"
+        
     },
         {
         name: "sunset",
@@ -20,6 +23,8 @@ export const forfrontItems = [
         small5: "./media/forgroundMode/Hjärtan-small.svg",
         small6: "./media/forgroundMode/Hjärtan-small-turned.svg",
         small7: "./media/forgroundMode/Hjärtan-medium-turned.svg",
+        small8: "./media/forgroundMode/Hjärtan-small-turned.svg",
+        small9: "./media/forgroundMode/Hjärtan-medium-turned.svg",
     },
         {
         name: "darkmode",
@@ -31,5 +36,7 @@ export const forfrontItems = [
         small5: "./media/forgroundMode/Star-openeyes-big.svg",
         small6: "./media/forgroundMode/Star-closedeyes-small-turned.svg",
         small7: "./media/forgroundMode/Star-closedeyes-small.svg",
+        small8: "./media/forgroundMode/Star-closedeyes-small-turned.svg",
+        small9: "./media/forgroundMode/Star-closedeyes-small.svg",
     },
 ]
