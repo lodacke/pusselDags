@@ -92,14 +92,12 @@ export const themes = [
                 theme: "Bamse",
                 imgTotal: "./media/bamse/skalman-puzzle/skalman.svg",
                 pusselParts: "pussel", 
-                maxHeight: 200
             },
             {
                 name: "Farmor",
                 theme: "Bamse",
                 imgTotal: "./media/bamse/farmor-puzzle/farmor.svg",
                 pusselParts: "pussel",
-                maxHeight: 200 
             }
         ]
     },
