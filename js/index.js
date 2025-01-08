@@ -1,4 +1,4 @@
-import { nav, body, forfront } from "/utilities/variables.js"
+import { nav, body, forfront, audio } from "/utilities/variables.js"
 import { renderLandingPage } from "/js/landingPage.js"
 import { forfrontItems } from "../API/forfront-items.js";
 
@@ -47,6 +47,17 @@ function renderNav(){
     navBackDom.addEventListener("click", () => {
         returnStep()
     });
+
+    let soundNav = nav.querySelector(".nav-sound")
+    soundNav.addEventListener("click", () => {
+        if (audio.paused) {  
+            audio.play();
+            soundNav.classList.remove("sound-off")
+        } else {
+            audio.pause();
+            soundNav.classList.add("sound-off")
+        }
+    })
 
     renderForfront("day");
 }

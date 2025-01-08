@@ -66,6 +66,10 @@ nav > *:hover{
     background-image: url("/media/sound.svg");
 }
 
+.sound-off{
+    background-image: url("/media/Ljud-off.svg");
+}
+
 .nav-back{
     background-image: url("/media/arrow-back.svg");
 }
