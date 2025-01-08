@@ -36,21 +36,21 @@ export function renderPussel(character) {
 
     const piecePositions = {
         Babblarna: {
-            piece1: { left: "50%", top: "0%" },
-            piece2: { left: "0%", top: "0%" },
-            piece3: { left: "0%", top: "50.5%" },
-            piece4: { left: "50%", top: "50.5%" },
-        },
+                piece1: { left: "203px", top: "0px"},
+                piece2: { left: "0px", top: "0px"},
+                piece3: { left: "0px", top: "195px"},
+                piece4: { left: "203px", top: "195px"},
+            },
         Bamse: {
-            piece1: { left: "33.3%", top: "0%" },
-            piece2: { left: "66.6%", top: "0%" },
-            piece3: { left: "0%", top: "0%" },
-            piece4: { left: "66.6%", top: "33.3%" },
-            piece5: { left: "0%", top: "66.8%" },
-            piece6: { left: "0%", top: "33.3%" },
-            piece7: { left: "33.3%", top: "66.8%" },
-            piece8: { left: "66.6%", top: "66.8%" },
-            piece9: { left: "33.3%", top: "33.3%" },
+            piece1: { left: "135px", top: "0px"},
+            piece2: { left: "270px", top: "0px"},
+            piece3: { left: "0px", top: "0px"},
+            piece4: { left: "270px", top: "130px"},
+            piece5: { left: "0px", top: "260px"},
+            piece6: { left: "0px", top: "130px"},
+            piece7: { left: "135px", top: "260px"},
+            piece8: { left: "270px", top: "260px"},
+            piece9: { left: "135px", top: "130px"},
         },
     };
 
