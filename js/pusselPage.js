@@ -35,22 +35,23 @@ export function renderPussel(character) {
     const outline = document.getElementById("outline");
 
     const piecePositions = {
+
         Babblarna: {
-                piece1: { left: "203px", top: "0px"},
-                piece2: { left: "0px", top: "0px"},
-                piece3: { left: "0px", top: "195px"},
-                piece4: { left: "203px", top: "195px"},
+                piece1: { left: 202, top: 0},
+                piece2: { left: 0, top: 0},
+                piece3: { left: 0, top: 195},
+                piece4: { left: 202, top: 195},
             },
         Bamse: {
-            piece1: { left: "135px", top: "0px"},
-            piece2: { left: "270px", top: "0px"},
-            piece3: { left: "0px", top: "0px"},
-            piece4: { left: "270px", top: "130px"},
-            piece5: { left: "0px", top: "260px"},
-            piece6: { left: "0px", top: "130px"},
-            piece7: { left: "135px", top: "260px"},
-            piece8: { left: "270px", top: "260px"},
-            piece9: { left: "135px", top: "130px"},
+            piece1: { left: 135, top: 0},
+            piece2: { left: 270, top: 0},
+            piece3: { left: 0, top: 0},
+            piece4: { left: 270, top: 130},
+            piece5: { left: 0, top: 260},
+            piece6: { left: 0, top: 130},
+            piece7: { left: 135, top: 260},
+            piece8: { left: 270, top: 260},
+            piece9: { left: 135, top: 130},
         },
     };
 
@@ -66,35 +67,50 @@ export function renderPussel(character) {
 
     outline.addEventListener("drop", (event) => {
         event.preventDefault();
+    
         let pieceId = event.dataTransfer.getData("text/plain");
         let piece = document.getElementById(pieceId);
 
-        const targetPosition = piecePositions[character.theme][piece.id];
-        outline.append(piece)
+        const dropX = event.clientX;
+        const dropY = event.clientY;
 
-        const targetRect = outline.getBoundingClientRect(); 
-        const pieceRect = piece.getBoundingClientRect(); 
-    
-        console.log("Outline position:", targetRect); 
-        console.log("Piece position:", pieceRect); 
+        let containerRect = outline.getBoundingClientRect();
+        let pieceRect = piece.getBoundingClientRect();
+        let pieceWidth = pieceRect.width;
+        let pieceHeight = pieceRect.height;
 
+        let targetPosition = piecePositions[character.theme][piece.id];
 
-        if (targetPosition) { 
+        let dropArea = {
+            left: containerRect.left + targetPosition.left,  
+            top: containerRect.top + targetPosition.top,
+            right: containerRect.left + targetPosition.left + pieceWidth,
+            bottom: containerRect.top + targetPosition.top+ pieceHeight
+        };
+
+        console.log(dropArea)
+
+        let corrArea = dropX >= dropArea.left && dropX <= dropArea.right &&
+                              dropY >= dropArea.top && dropY <= dropArea.bottom;
+
+        if (corrArea) {
             piece.style.position = "absolute";
-            piece.style.left = targetPosition.left;
-            piece.style.top = targetPosition.top;
-
+            piece.style.left = `${targetPosition.left}px`; 
+            piece.style.top = `${targetPosition.top}px`;    
+            outline.append(piece);
             counter++;
 
             let pieceCount = 0;
             for (let key in piecePositions[character.theme]) {
                 pieceCount++;
             }
-
             if (counter === pieceCount) {
                 console.log("Puzzle completed!");
                 renderFinished(character);
             }
+
+        } else {
+            console.log("Piece placed in the wrong area.");
         }
     });
 }
@@ -110,8 +126,8 @@ function renderFinished(character){
         let retryButton = document.createElement("button");
         retryButton.innerText = "Spela igen";
         let puzzleContainer = document.querySelector(".puzzle-container")
-        let puzzlePicesC = document.querySelector(`.${character.theme}`);
-        puzzlePicesC.style.display = "none";
+        let picesC = document.querySelector(`.${character.theme}`);
+        picesC.style.display = "none";
         puzzleContainer.classList.add("puzzle-container-after");
         puzzleContainer.append(retryButton)
 
