@@ -1,4 +1,4 @@
-import { main } from "/utilities/variables.js";
+import { main, soundEff } from "/utilities/variables.js";
 import {swapCSS} from "/utilities/swapCSS.js";
 import { renderTheme } from "./themePage.js";
 import { callFunction } from "./index.js";
@@ -17,6 +17,7 @@ export function renderLandingPage () {
 
     let startButton = document.querySelector(".start-button");
     startButton.addEventListener("click", () => {
+        soundEff.play();
         main.querySelector(".landing-container").classList.add("landing-ending")
         main.querySelector(".start-button").classList.add("button-ending")
          setTimeout(() => {

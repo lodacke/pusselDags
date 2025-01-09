@@ -7,8 +7,8 @@ main {
 }
 
 .start-button {
-    height: 25%;
-    width: 23vw;
+    height: 23%;
+    width: 20vw;
     font-size: 44px;
     background-color: white;
     border: 3px solid black;
@@ -75,12 +75,10 @@ main {
 
 @keyframes fade-out {
         0% {
-        opacity: 0.9; 
+        opacity: 0.2; 
     }
-    70%{
-        opacity: 0.5;
-    }
-    90%{
+
+    10%{
         opacity: 0;
     }
     100% {

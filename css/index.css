@@ -15,10 +15,10 @@
 }
 
 body {
-    margin: 0;
+    overflow: hidden;
+    margin: 0px;
     font-family: poppins-medium;
     transition: background-color 2s ease, background 1s ease;
-    position: relative;
 }
 
 /* NAV */ 
@@ -30,6 +30,7 @@ nav{
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1%;
+    touch-action: manipulation;
 }
 
 nav > *{
@@ -44,7 +45,7 @@ nav > *{
     transition: border 0.3s ease-in-out;
 }
 
-nav > *:hover{
+nav > *:hover, nav:focus{
     border: 3px solid black;
 }
 
@@ -89,13 +90,12 @@ body[data-theme="sunset"] {
 body[data-theme="sunset"]::after {
     content: "";
     position: fixed;
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    width: 100%;
     height: 0;
     background: linear-gradient(to top, var(--sunset-color) 0%, transparent 100%);
-    z-index: -2;
+    z-index: -3;
     animation: grow-from-bottom 1s ease-in-out forwards;
 }
 
@@ -104,19 +104,19 @@ body[data-theme="sunset"]::after {
         height: 0;
     }
     100% {
-        height: 120vh;
+        height: 90vh;
     }
 }
 
 /* forfront*/ 
 
 .forfront {
-    position: absolute; 
-    left: 0;
-    width: 100vw;
-    max-height: 100vh;
-    z-index: -1; 
-    pointer-events: none;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    max-width: 90vw; 
+    overflow: hidden; 
+    z-index: -2;
 }
 
 .landscape {
@@ -127,7 +127,6 @@ body[data-theme="sunset"]::after {
     background-image: url("/media/forfront.svg");
     background-size: cover;
     background-position: center;
-    pointer-events: none;
 }
 
 .small1, .small2, .small3, .small4, .small5, .small6, .small7, .small8, .small9, .main-item{
@@ -154,11 +153,11 @@ body[data-theme="sunset"]::after {
 
 .small2{
     bottom: 60%;
-    left: 3%;   
+    left: 6%;   
 }
 
 .small3{
-    top: 2%;
+    top: 25px;
     left: 44%;
 }
 
@@ -178,7 +177,7 @@ body[data-theme="sunset"]::after {
 }
 
 .small7{
-    right: 0%;
+    right: 30px;
     top: 5%;
 }
 
@@ -189,7 +188,7 @@ body[data-theme="sunset"]::after {
 
 .small9{
     right: 15%;
-    bottom: 5%; 
+    bottom: 30px; 
 }
 
 .main-item{
@@ -215,7 +214,7 @@ body[data-theme="sunset"]::after {
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-90%, 110%);
+        transform: translate(-100%, 100%);
     }
 }
 

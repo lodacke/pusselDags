@@ -1,4 +1,4 @@
-import { nav, body, forfront, audio } from "/utilities/variables.js"
+import { nav, body, forfront, bkgSound, soundEff } from "/utilities/variables.js"
 import { renderLandingPage } from "/js/landingPage.js"
 import { forfrontItems } from "../API/forfront-items.js";
 
@@ -11,15 +11,16 @@ export function callFunction(func, ...args) {
 
 function renderNav(){
     nav.innerHTML = `
-    <div class="nav-back"></div>
-    <div class="nav-change-mode day"></div>
-    <div class="nav-sound"></div>
+    <div tabindex="0" role="button" aria-label="Gå till föregående ida" class="nav-back"></div>
+    <div tabindex="0" role="button" aria-label="Ändra bakgrundsfärg" class="nav-change-mode day"></div>
+    <div tabindex="0" role="button" aria-label="Stoppa eller start musik" class="nav-sound"></div>
     `;
 
     let changeModeDom = document.querySelector(".nav-change-mode");
     let navBackDom = document.querySelector(".nav-back")
 
     changeModeDom.addEventListener("click", () => {
+        soundEff.play();
         const currentTheme = body.getAttribute("data-theme");
 
         switch (currentTheme) {
@@ -45,16 +46,17 @@ function renderNav(){
     });
 
     navBackDom.addEventListener("click", () => {
+        soundEff.play();
         returnStep()
     });
 
     let soundNav = nav.querySelector(".nav-sound")
     soundNav.addEventListener("click", () => {
-        if (audio.paused) {  
-            audio.play();
+        if (bkgSound.paused) {  
+            bkgSound.play();
             soundNav.classList.remove("sound-off")
         } else {
-            audio.pause();
+            bkgSound.pause();
             soundNav.classList.add("sound-off")
         }
     })
@@ -76,12 +78,13 @@ function renderForfront(mode, change){
     forfrontItems.forEach( modeItem=> {
         if(modeItem.name === mode){
             itemContainer.innerHTML = `
-            <img src=${modeItem.mainComponent} class="main-item ${mode}-item"></img>
+            <img src=${modeItem.mainComponent} class="main-item ${mode}-item"></img alt="sun or moon depending on mode set from navigation">
             `;
 
             for (let key in modeItem) {
                 if (key.startsWith("small")) { 
                     let smallItem = document.createElement("img");
+                    smallItem.ariaDescription="This content is hidden";
                     smallItem.src = modeItem[key]; 
                     smallItem.classList.add(`${key}`); 
                     itemContainer.append(smallItem);
@@ -91,8 +94,10 @@ function renderForfront(mode, change){
     })
 }
 
+
 export function returnStep(){
     functionStack.pop();
+    soundEff.play();
     const previousFunctionData = functionStack[functionStack.length - 1];
 
     if (previousFunctionData) {

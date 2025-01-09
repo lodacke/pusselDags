@@ -1,14 +1,14 @@
 import { swapCSS } from "/utilities/swapCSS.js"
-import { main } from "/utilities/variables.js"
+import { main, soundEff } from "/utilities/variables.js"
 import {renderPussel} from "./pusselPage.js"
 import { callFunction } from "./index.js";
 
 export function renderCharacters (theme) {
 
-    console.log(theme)
     swapCSS("charactersPage");
 
         document.querySelector(".landscape").style.opacity = "1";
+        document.querySelector(".main-item").style.opacity = "1";
 
     main.innerHTML = `
     <div class="container">
@@ -19,7 +19,9 @@ export function renderCharacters (theme) {
         let div = document.createElement("div");
         div.classList.add(`character_${character.name}`);
         div.classList.add("character");
+        div.tabindex = 0;
         div.addEventListener("click", ()=> {
+            soundEff.play();
             callFunction(() => renderPussel(character))
         })
         div.innerHTML = `

@@ -1,5 +1,5 @@
 import { swapCSS } from "/utilities/swapCSS.js"
-import { main } from "/utilities/variables.js"
+import { main, soundEff } from "/utilities/variables.js"
 import {themes} from "/API/themes.js"
 import { renderCharacters } from "./characters.js";
 import { callFunction } from "./index.js";
@@ -15,10 +15,12 @@ export function renderTheme () {
     let themeContainer = document.querySelector(".container");
     themes.forEach(theme => {
         let div = document.createElement("div");
+        div.tabindex = 0;
         div.innerHTML = ` 
         <img src="${theme.img}">
          <h2> ${theme.name}</h2>`;
         div.addEventListener("click" , () => {
+            soundEff.play();
             callFunction(() => renderCharacters(theme))
         })
         div.classList.add("theme-container");

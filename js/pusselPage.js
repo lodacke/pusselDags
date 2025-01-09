@@ -5,6 +5,9 @@ export function renderPussel(character) {
     swapCSS("puzzle");
     let counter = 0;
 
+    document.querySelector(".landscape").style.opacity = "0";
+    document.querySelector(".main-item").style.opacity = "0";
+
     main.innerHTML = `
     <div class="puzzle-container">
         <div id="outline">
@@ -12,6 +15,7 @@ export function renderPussel(character) {
         </div>
         <div class="puzzle-container-pieces ${character.theme}">
         </div>
+        <audio id="pop-effect" src="./media/audio/button-click-1.wav"></audio>
     </div>`;
 
     let puzzleOrder = [2, 1, 3, 4, 9, 6, 8, 7, 5];
@@ -28,8 +32,6 @@ export function renderPussel(character) {
             i++;
         }
     }
-
-    document.querySelector(".landscape").style.opacity = "0";
 
     const puzzlePieces = document.querySelectorAll(".puzzle-piece");
     const outline = document.getElementById("outline");
@@ -88,12 +90,12 @@ export function renderPussel(character) {
             bottom: containerRect.top + targetPosition.top+ pieceHeight
         };
 
-        console.log(dropArea)
 
         let corrArea = dropX >= dropArea.left && dropX <= dropArea.right &&
                               dropY >= dropArea.top && dropY <= dropArea.bottom;
 
         if (corrArea) {
+            main.querySelector("#pop-effect").play();
             piece.style.position = "absolute";
             piece.style.left = `${targetPosition.left}px`; 
             piece.style.top = `${targetPosition.top}px`;    
@@ -121,8 +123,10 @@ function renderFinished(character){
         while (container.firstChild) {
             container.removeChild(container.firstChild); 
         }
-        container.innerHTML = `<img class="puzzle-finish" src="${character.imgPuzzle}">`;
-
+        container.innerHTML = `
+        <audio src="/media/audio/win.wav"></audio>
+        <img class="puzzle-finish" src="${character.imgPuzzle}">`;
+        container.querySelector("audio").play()
         let retryButton = document.createElement("button");
         retryButton.innerText = "Spela igen";
         let puzzleContainer = document.querySelector(".puzzle-container")
