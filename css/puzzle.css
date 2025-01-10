@@ -3,7 +3,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
     padding: 5%;
 }
 
@@ -86,7 +85,6 @@ main{
 
 #outline{
     position: relative;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +107,6 @@ main{
     padding: 20px;
     font-size: 40px;
 }
-
 
 @keyframes grow-shrink {
     0% {

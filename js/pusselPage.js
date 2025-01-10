@@ -151,6 +151,7 @@ function renderFinished(character){
         picesC.style.display = "none";
         puzzleContainer.classList.add("puzzle-container-after");
         container.append(retryButton);
+        container.style.height = "100%";
 
         retryButton.addEventListener("click", () => {
             renderPussel(character)
