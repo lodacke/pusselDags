@@ -12,6 +12,7 @@ main{
     justify-content: space-between;
     gap: 5%;
     height: 55vh;
+    align-items: center;
 }
 
 .puzzle-container-pieces.Babblarna { 
@@ -21,6 +22,7 @@ main{
     grid-template-rows: repeat(2, 200px);
     grid-template-columns: repeat(2, 200px); 
     gap: 8%;
+    height: 100%;
 }
 
 .puzzle-container-pieces.Bamse { 
