@@ -77,6 +77,7 @@ function renderForfront(mode, change){
 
     forfrontItems.forEach( modeItem=> {
         if(modeItem.name === mode){
+            itemContainer.id = `${mode}-item`;
             itemContainer.innerHTML = `
             <img src=${modeItem.mainComponent} class="main-item ${mode}-item"></img alt="sol eller måne, beroende på vilket mood">
             `;
