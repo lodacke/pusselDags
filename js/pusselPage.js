@@ -150,7 +150,7 @@ function renderFinished(character){
         let picesC = document.querySelector(`.${character.theme}`);
         picesC.style.display = "none";
         puzzleContainer.classList.add("puzzle-container-after");
-        puzzleContainer.append(retryButton)
+        container.append(retryButton);
 
         retryButton.addEventListener("click", () => {
             renderPussel(character)

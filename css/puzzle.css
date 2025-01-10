@@ -86,13 +86,18 @@ main{
 
 #outline{
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
 }
 
 .puzzle-finish{
    animation: grow-shrink 2s ease-in;
 }
 
-.puzzle-container > button{
+#outline > button{
     background-color: var(--container-color);
     border: 3px solid black;
     border-radius: 10px;
