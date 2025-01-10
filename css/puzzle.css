@@ -25,7 +25,7 @@ main{
     height: 100%;
 }
 
-.puzzle-container-pieces.Bamse { 
+.puzzle-container-pieces.Bamse, .puzzle-container-pieces.pawpatrol { 
     box-sizing: border-box; 
     min-width: 50%;
     display: grid;
