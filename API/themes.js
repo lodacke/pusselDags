@@ -133,33 +133,42 @@ export const themes = [
     },
     {
         name: "Paw patrol",
-        img: "./media/group-characters/",
+        img: "./media/group-characters/PawPatrol-characters.svg",
         characters: [
             {
-                name: "Bing",
-                imgTotal: "bingImage",
-                pusselParts: "pussel", 
+                name: "Pawpantrol1",
+                theme: "pawpantrol",
+                imgTotal: "./media/pawpatrol/pawpantrol1-puzzle/pawPatrol1.svg",
+                imgPuzzle: "./media/pawpatrol/pawpantrol1-puzzle/pawpatrol1-full.svg",
+                pussel1: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-1.svg", 
+                pussel2: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-2.svg", 
+                pussel3: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-3.svg", 
+                pussel4: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-4.svg", 
+                pussel5: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-5.svg", 
+                pussel6: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-6.svg", 
+                pussel7: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-7.svg", 
+                pussel8: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-8.svg", 
+                pussel9: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-9.svg", 
+                outline: "./media/pawpatrol/pawpatrol1-puzzle/pawpatrol1-outline.svg", 
             },
             {
-                name: "Flopp",
-                imgTotal: "floppImage",
-                pusselParts: "pussel", 
+                name: "Pawpantrol2",
+                theme: "pawpantrol",
+                imgTotal: "./media/pawpatrol/pawpatrol2-puzzle/pawPatrol2.svg",
+                imgPuzzle: "./media/pawpatrol/pawpatrol2-puzzle/pawpatrol2-full.svg",
             },
             {
-                name: "Pando",
-                imgTotal: "pandoImage",
-                pusselParts: "pussel", 
+                name: "Pawpantrol3",
+                theme: "pawpantrol",
+                imgTotal: "./media/pawpatrol/pawpatrol3-puzzle/pawpatrol3.svg",
+                imgPuzzle: "./media/pawpatrol/pawpatrol3-puzzle/pawpatrol3-full.svg",
             },
             {
-                name: "Kajsa",
-                imgTotal: "KajsaImage",
-                pusselParts: "pussel", 
+                name: "Pawpantrol4",
+                theme: "pawpantrol",
+                imgTotal: "./media/pawpatrol/pawpatrol4-puzzle/pawPatrol4.svg",
+                imgPuzzle: "./media/pawpatrol/pawpatrol4-puzzle/pawpatrol4-full.svg",
             },
-            {
-                name: "Amma",
-                imgTotal: "ammaImage",
-                pusselParts: "pussel", 
-            }
         ]
     }
 ];
