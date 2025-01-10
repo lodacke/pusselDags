@@ -193,32 +193,33 @@ body[data-theme="sunset"]::after {
     bottom: 53%;
 }
 
-#darkmode-item > .small4, 
-#darkmode-item > .small3, 
-#darkmode-item > .small2, 
+
 #sunset-item > .small5, 
-#sunset-item > .small7, 
+#sunset-item > .small6, 
 #sunset-item > .small2 {
-    animation: item-wiggle 2s ease-in 
+    animation: item-wiggle 2s ease-in;
+}
+
+#darkmode-item > .small7, 
+#darkmode-item > .small8, 
+#darkmode-item > .small2 {
+    animation: combined-animation 2s ease-in;
 }
 
 #sunset-item > .small1, 
 #sunset-item > .small3, 
-#sunset-item > .small6 {
+#sunset-item > .small8 {
     animation: item-second-wiggle 2s ease-in-out;
 }
 
 
-
 #darkmode-item > .small1,
-#darkmode-item > .small2,
-#darkmode-item > .small3,
-#darkmode-item > .small4,
 #darkmode-item > .small5,
 #darkmode-item > .small6,
-#darkmode-item > .small7,
-#darkmode-item > .small8 {
-     animation: item-opacity 2s ease-in-out !important;
+#darkmode-item > .small4,
+#darkmode-item > .small3,
+#darkmode-item > .main-item {
+    animation: item-opacity 2s ease-in-out;
 }
 
 @keyframes sun-enter {
@@ -266,6 +267,21 @@ body[data-theme="sunset"]::after {
     }
 }
 
+@keyframes combined-animation {
+    0% {
+        opacity: 0.2; 
+        transform: rotate(0deg); 
+    }
+    50% {
+        opacity: 0.5; 
+        transform: rotate(50deg); 
+    }
+    100% {
+        opacity: 1; 
+        transform: rotate(0deg);
+    }
+}
+
 @keyframes item-second-wiggle {
     0% {
     transform: rotate(10deg); 
@@ -274,7 +290,7 @@ body[data-theme="sunset"]::after {
       transform: rotate(0deg); 
     }
     50% {
-      transform: rotate(15deg); 
+      transform: rotate(20deg); 
     }
     75% {
       transform: rotate(0deg); 
