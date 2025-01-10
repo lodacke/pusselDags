@@ -15,10 +15,16 @@ export function renderTheme () {
     let themeContainer = document.querySelector(".container");
     themes.forEach(theme => {
         let div = document.createElement("div");
-        div.tabindex = 0;
+        div.tabIndex = 0;
         div.innerHTML = ` 
         <img src="${theme.img}">
          <h2> ${theme.name}</h2>`;
+        div.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") { 
+                soundEff.play();
+                callFunction(() => renderCharacters(theme));
+            }
+        });
         div.addEventListener("click" , () => {
             soundEff.play();
             callFunction(() => renderCharacters(theme))

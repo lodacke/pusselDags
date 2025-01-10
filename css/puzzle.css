@@ -51,6 +51,30 @@ main{
     grid-column: 2;
     grid-row: 2;
 }
+#piece5{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#piece6{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#piece7{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#piece8{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#piece9{
+    grid-column: 2;
+    grid-row: 3;
+}
 
 .puzzle-piece{
     z-index: 3;

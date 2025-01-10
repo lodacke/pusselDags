@@ -13,7 +13,7 @@ export function renderLandingPage () {
         <div class="landing-container">
         <img src="./media/airplaine-banner-cord.svg" alt="Välkommen till puzzeldags!"> 
         </div>
-        <button class="start-button">Start</button>`;
+        <button aria-label="start" class="start-button">Start</button>`;
 
     let startButton = document.querySelector(".start-button");
     startButton.addEventListener("click", () => {

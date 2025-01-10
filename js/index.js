@@ -11,55 +11,55 @@ export function callFunction(func, ...args) {
 
 function renderNav(){
     nav.innerHTML = `
-    <div tabindex="0" role="button" aria-label="Gå till föregående ida" class="nav-back"></div>
+    <div tabindex="0" role="button" aria-label="Gå till föregående sida" class="nav-back"></div>
     <div tabindex="0" role="button" aria-label="Ändra bakgrundsfärg" class="nav-change-mode day"></div>
     <div tabindex="0" role="button" aria-label="Stoppa eller start musik" class="nav-sound"></div>
     `;
 
     let changeModeDom = document.querySelector(".nav-change-mode");
     let navBackDom = document.querySelector(".nav-back")
+    let soundNav = document.querySelector(".nav-sound");
 
-    changeModeDom.addEventListener("click", () => {
-        soundEff.play();
-        const currentTheme = body.getAttribute("data-theme");
+    changeModeDom.addEventListener("click", handleChangeMode);
 
-        switch (currentTheme) {
-            case "day":
-                body.dataset.theme = "sunset";
-                changeModeDom.classList.remove("day")
-                changeModeDom.classList.add("sunset")
-                renderForfront("sunset", true)
-                break;
-            case "sunset":
-                body.dataset.theme = "darkmode";
-                changeModeDom.classList.remove("sunset")
-                changeModeDom.classList.add("darkmode")
-                renderForfront("darkmode", true)
-                break;
-            case "darkmode":
-                body.dataset.theme = "day";
-                changeModeDom.classList.remove("darkmode")
-                changeModeDom.classList.add("day")
-                renderForfront("day", true)
-                break;
+    changeModeDom.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            handleChangeMode();
         }
     });
 
-    navBackDom.addEventListener("click", () => {
+    function handleNavBack() {
         soundEff.play();
-        returnStep()
+        returnStep();
+        }
+
+    navBackDom.addEventListener("click", handleNavBack);
+
+    navBackDom.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            handleNavBack();
+        }
     });
 
-    let soundNav = nav.querySelector(".nav-sound")
-    soundNav.addEventListener("click", () => {
-        if (bkgSound.paused) {  
+    function handleSoundToggle() {
+        if (bkgSound.paused) {
             bkgSound.play();
-            soundNav.classList.remove("sound-off")
+            soundNav.classList.remove("sound-off");
+            soundEff.ariaLabel = "ljud på";
         } else {
             bkgSound.pause();
-            soundNav.classList.add("sound-off")
+            soundNav.classList.add("sound-off");
+            soundEff.ariaLabel = "ljud av";
         }
-    })
+    }
+
+    soundNav.addEventListener("click", handleSoundToggle);
+
+    soundNav.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            handleSoundToggle();
+        }
+    });
 
     renderForfront("day");
 }
@@ -78,7 +78,7 @@ function renderForfront(mode, change){
     forfrontItems.forEach( modeItem=> {
         if(modeItem.name === mode){
             itemContainer.innerHTML = `
-            <img src=${modeItem.mainComponent} class="main-item ${mode}-item"></img alt="sun or moon depending on mode set from navigation">
+            <img src=${modeItem.mainComponent} class="main-item ${mode}-item"></img alt="sol eller måne, beroende på vilket mood">
             `;
 
             for (let key in modeItem) {
@@ -94,7 +94,6 @@ function renderForfront(mode, change){
     })
 }
 
-
 export function returnStep(){
     functionStack.pop();
     soundEff.play();
@@ -105,6 +104,36 @@ export function returnStep(){
         func(...args); 
     } else {
         console.warn("No previous function found in the stack");
+    }
+}
+
+function handleChangeMode() {
+    soundEff.play();
+    const currentTheme = body.getAttribute("data-theme");
+    const changeButton = document.querySelector(".nav-change-mode")
+
+    switch (currentTheme) {
+        case "day":
+            body.dataset.theme = "sunset";
+            changeButton.classList.remove("day");
+            changeButton.classList.add("sunset");
+            changeButton.ariaLabel = "solnedgång";
+            renderForfront("sunset", true);
+            break;
+        case "sunset":
+            body.dataset.theme = "darkmode";
+            changeButton.classList.remove("sunset");
+            changeButton.classList.add("darkmode");
+            changeButton.ariaLabel = "mörkerläge";
+            renderForfront("darkmode", true);
+            break;
+        case "darkmode":
+            body.dataset.theme = "day";
+            changeButton.classList.remove("darkmode");
+            changeButton.classList.add("day");
+            changeButton.ariaLabel = "dag-läge";
+            renderForfront("day", true);
+            break;
     }
 }
 

@@ -20,11 +20,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     position: relative; 
     border: 3px solid black;
-    transition: box-shadow 0.6s ease-in-out;
-    transition: border 0.2s ease-in;
+    transition: box-shadow 0.6s ease-in-out, border 0.2s ease-in;
 }
 
 .character > img{
@@ -32,7 +30,7 @@ main {
     width: 90%;
 }
 
-.character:hover{
+.character:hover, .character:focus{
     cursor: pointer;    
     border: 3px solid rgb(255, 255, 255);
     box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, 0.5);

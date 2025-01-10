@@ -19,11 +19,18 @@ export function renderCharacters (theme) {
         let div = document.createElement("div");
         div.classList.add(`character_${character.name}`);
         div.classList.add("character");
-        div.tabindex = 0;
+        div.tabIndex = 0;
+        div.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") { 
+                console.log("entered")
+                //soundEff.play();
+                callFunction(() => renderCharacters(theme));
+            }
+        });
         div.addEventListener("click", ()=> {
             soundEff.play();
             callFunction(() => renderPussel(character))
-        })
+        });
         div.innerHTML = `
          <img src="${character.imgTotal}" alt="${character.name}" />`;
         charactersContainer.append(div);

@@ -132,8 +132,8 @@ export const themes = [
         ]
     },
     {
-        name: "Bing",
-        img: "./media/group-characters/bing-characters.png",
+        name: "Paw patrol",
+        img: "./media/group-characters/",
         characters: [
             {
                 name: "Bing",

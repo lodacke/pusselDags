@@ -11,7 +11,7 @@ export function renderPussel(character) {
     main.innerHTML = `
     <div class="puzzle-container">
         <div id="outline">
-            <img class="puzzle-outline" src="${character.outline}" />
+            <img class="puzzle-outline" src="${character.outline}" alt="Pussel outline" tabindex=0/>
         </div>
         <div class="puzzle-container-pieces ${character.theme}">
         </div>
@@ -25,9 +25,11 @@ export function renderPussel(character) {
         if (key.startsWith("pussel")) {
             let piece = document.createElement("img");
             piece.classList.add("puzzle-piece");
+            piece.tabIndex = 0;
             piece.id = `piece${puzzleOrder[i]}`;
             piece.draggable = true;
             piece.src = character[key];
+            piece.alt = "Pusselbit";
             main.querySelector(".puzzle-container-pieces").append(piece);
             i++;
         }
@@ -129,6 +131,8 @@ function renderFinished(character){
         container.querySelector("audio").play()
         let retryButton = document.createElement("button");
         retryButton.innerText = "Spela igen";
+        retryButton.tabIndex = 0;
+        
         let puzzleContainer = document.querySelector(".puzzle-container")
         let picesC = document.querySelector(`.${character.theme}`);
         picesC.style.display = "none";
