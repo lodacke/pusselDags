@@ -42,7 +42,7 @@ main {
 
 .move-in {
     opacity: 1;
-    transform: scale(1); 
+    transform: scale(1);
     animation: landing 1.2s ease-out forwards;
     animation-iteration-count: 1;
 }
@@ -60,7 +60,7 @@ main {
     }
     50% {
         opacity: 1;
-        transform: scale(1.1);  
+        transform: scale(1.05);  
     }
     100% {
         opacity: 1;
