@@ -99,11 +99,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 10vh;
+    width: 22vw;
+    height: 28%;
     padding: 20px;
-    font-size: 2.5vw;
-    align-self: flex-end;
+    font-size: 40px;
 }
 
 
