@@ -11,7 +11,7 @@ main{
     display: flex;
     justify-content: center;
     gap: 10%;
-    height: 55vh;
+    height: 445px;
     align-items: center;
 }
 
