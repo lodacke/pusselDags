@@ -153,6 +153,7 @@ function renderFinished(character){
         puzzleContainer.classList.add("puzzle-container-after");
         container.append(retryButton);
         container.classList.remove("fade-out");
+        container.style.height = "100%";
 
         retryButton.addEventListener("click", () => {
             renderPussel(character)
