@@ -91,23 +91,24 @@ body[data-theme="sunset"]::after {
     content: "";
     position: fixed;
     left: 50%;
+    bottom: 0;  
+    height: 0; 
     transform: translateX(-50%);
     width: 100%;
     height: 0;
     background: linear-gradient(to top, var(--sunset-color) 0%, transparent 100%);
     z-index: -3;
-    animation: grow-from-bottom 1s ease-in-out forwards;
+    animation: grow-from-bottom 2s ease-in forwards;
 }
 
 @keyframes grow-from-bottom {
     0% {
-        height: 0;
+        height: 0; 
     }
     100% {
-        height: 90vh;
+        height: 90vh; 
     }
 }
-
 /* forfront*/ 
 
 .forfront {
