@@ -7,9 +7,9 @@ main {
 }
 
 .start-button {
-    height: 32%;
+    height: 22%;
     width: 18vw;
-    font-size: 52px;
+    font-size: 40px;
     background-color: rgb(255, 255, 255);
     border: 3px solid black;
     padding: 10px;

@@ -62,7 +62,7 @@ export const themes = [
         ]
     },
         {
-        name: "Paw patrol",
+        name: "Paw Patrol",
         img: "./media/group-characters/PawPatrol-characters.svg",
         characters: [
             {
