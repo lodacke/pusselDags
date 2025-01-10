@@ -109,6 +109,7 @@ export const themes = [
                 theme: "pawpatrol",
                 imgTotal: "./media/pawpatrol/pawpatrol4-puzzle/pawPatrol4.svg",
                 imgPuzzle: "./media/pawpatrol/pawpatrol4-puzzle/pawpatrol4-full.svg",
+                outline: "./media/pawpatrol/pawpatrol4-puzzle/pawpatrol4-outline.svg"
             },
         ]
     },
