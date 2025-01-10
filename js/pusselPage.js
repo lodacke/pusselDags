@@ -57,6 +57,17 @@ export function renderPussel(character) {
             piece8: { left: 270, top: 260},
             piece9: { left: 135, top: 130},
         },
+        pawpatrol: {
+            piece1: { left: 135, top: 0},
+            piece2: { left: 270, top: 0},
+            piece3: { left: 0, top: 0},
+            piece4: { left: 270, top: 130},
+            piece5: { left: 0, top: 260},
+            piece6: { left: 0, top: 130},
+            piece7: { left: 135, top: 260},
+            piece8: { left: 270, top: 260},
+            piece9: { left: 135, top: 130},
+        },
     };
 
     puzzlePieces.forEach(piece => {
