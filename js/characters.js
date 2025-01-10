@@ -15,16 +15,21 @@ export function renderCharacters (theme) {
     </div>`;
     
     let charactersContainer = document.querySelector(".container");
-    theme.characters.forEach(character => {
+    theme.characters.forEach((character, index)=> {
         let div = document.createElement("div");
         div.classList.add(`character_${character.name}`);
         div.classList.add("character");
         div.tabIndex = 0;
+        setTimeout(() => {
+            console.log("added")
+            div.classList.add("move-in")
+        }, index * 700)
+
         div.addEventListener("keydown", (event) => {
             if (event.key === "Enter") { 
                 console.log("entered")
-                //soundEff.play();
-                callFunction(() => renderCharacters(theme));
+                soundEff.play();
+                callFunction(() => renderPussel(character));
             }
         });
         div.addEventListener("click", ()=> {
@@ -36,10 +41,5 @@ export function renderCharacters (theme) {
         charactersContainer.append(div);
     });
 
-    let characterDoms = main.querySelectorAll(".character")
-    characterDoms.forEach((char, index) => {
-        setTimeout(() => {
-            char.classList.add("move-in")
-        }, index * 700)
-    }); 
+    
 }
