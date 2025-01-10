@@ -40,6 +40,6 @@ export function renderCharacters (theme) {
     characterDoms.forEach((char, index) => {
         setTimeout(() => {
             char.classList.add("move-in")
-        }, index * 400)
+        }, index * 700)
     }); 
 }

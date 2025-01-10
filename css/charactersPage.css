@@ -37,7 +37,7 @@ main {
 }
 
 .move-in{
-    animation: landing 1s ease-in forwards;
+    animation: landing 1.5s ease-in forwards;
 }
 
 @keyframes landing {
@@ -45,11 +45,12 @@ main {
         transform: translateY(0px);  
     }
     50% {
-        transform: translateY(-10px);  
+        transform: translateY(-12px);  
     }
     100% {
         transform: translateY(0px);  
     }
 }
+
 
 
