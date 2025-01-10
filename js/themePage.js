@@ -16,6 +16,7 @@ export function renderTheme () {
     themes.forEach(theme => {
         let div = document.createElement("div");
         div.tabIndex = 0;
+        div.ariaDescription = `${theme}`;
         div.innerHTML = ` 
         <img src="${theme.img}">
          <h2> ${theme.name}</h2>`;

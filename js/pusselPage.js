@@ -132,8 +132,9 @@ export function renderPussel(character) {
 }
 
 function renderFinished(character){
+    let container = main.querySelector("#outline");
+    container.classList.add("fade-out");
     setTimeout(() => {
-        let container = main.querySelector("#outline");
         while (container.firstChild) {
             container.removeChild(container.firstChild); 
         }
@@ -151,9 +152,10 @@ function renderFinished(character){
         picesC.style.display = "none";
         puzzleContainer.classList.add("puzzle-container-after");
         container.append(retryButton);
+        container.classList.remove("fade-out");
 
         retryButton.addEventListener("click", () => {
             renderPussel(character)
         })
-    }, 600)
+    }, 800)
 }

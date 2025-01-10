@@ -110,6 +110,10 @@ main{
     font-size: 40px;
 }
 
+.fade-out{
+    animation: fade-out 2s ease-out;
+}
+
 
 @keyframes grow-shrink {
     0% {
@@ -121,4 +125,17 @@ main{
     100% {
         transform: scale(1); 
     }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0.5; 
+    }
+    50% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 0; 
+    }
+    
 }

@@ -19,6 +19,7 @@ export function renderCharacters (theme) {
         let div = document.createElement("div");
         div.classList.add(`character_${character.name}`);
         div.classList.add("character");
+        div.ariaDescription = `${character}`;
         div.tabIndex = 0;
         setTimeout(() => {
             console.log("added")

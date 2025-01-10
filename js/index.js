@@ -11,9 +11,9 @@ export function callFunction(func, ...args) {
 
 function renderNav(){
     nav.innerHTML = `
-    <div tabindex="0" role="button" aria-label="Gå till föregående sida" class="nav-back"></div>
-    <div tabindex="0" role="button" aria-label="Ändra bakgrundsfärg" class="nav-change-mode day"></div>
-    <div tabindex="0" role="button" aria-label="Stoppa eller start musik" class="nav-sound"></div>
+    <div tabindex="1" role="button" aria-label="Gå till föregående sida" class="nav-back"></div>
+    <div tabindex="1" role="button" aria-label="Ändra bakgrundsfärg" class="nav-change-mode day"></div>
+    <div tabindex="1" role="button" aria-label="Stoppa eller start musik" class="nav-sound"></div>
     `;
 
     let changeModeDom = document.querySelector(".nav-change-mode");
